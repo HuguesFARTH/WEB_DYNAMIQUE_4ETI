@@ -16,7 +16,7 @@ Création d'un site web pour une association d'acupuncture.
 1. Accessibilité et versions HTML
  - L’ensemble du site respectera les normes d’accessibilité de niveau AAA.
  -  Il sera écrit en HTML 5.
- -  De plus, toute page du site devra être accessible de la page d’accueil en 3 interac- tions au maximum (clic, raccourci, etc.).
+ -  De plus, toute page du site devra être accessible de la page d’accueil en 3 interactions au maximum (clic, raccourci, etc.).
  -  La navigation devra être possible sans souris ou sans clavier.
 
 2. Environnement d’exécution
