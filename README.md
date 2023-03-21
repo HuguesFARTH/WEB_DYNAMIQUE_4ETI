@@ -3,7 +3,7 @@
 ## Prise en main du projet
 
 ###### Expression du besoin
-- [ ] Interprétation du cahier des charges [Joseph POURADIER DUTEIL](https://github.com/jo-pouradier)
+- [x] Interprétation du cahier des charges [Joseph POURADIER DUTEIL](https://github.com/jo-pouradier)
 
 ###### Maquette statique du site
 - [ ] Faire une première interface du site [Pierre-Louis TELEP](https://github.com/Pierrelouis2)
