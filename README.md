@@ -15,5 +15,11 @@
 - [ ] Découvert de la base de donnée [Hugues FARTHOUAT](https://github.com/HuguesFARTH)
 
 
+## Création de l'environnement 
+
+- install php = [How To Install PHP 8.2 on Ubuntu 22.04 - TechvBlogs](https://techvblogs.com/blog/install-php-8-2-ubuntu-22-04)
+- install apache2 = [How To Install the Apache Web Server on Ubuntu 22.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04)
+- install postgresql = [How To Install the Apache Web Server on Ubuntu 22.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04)
+
 
 
