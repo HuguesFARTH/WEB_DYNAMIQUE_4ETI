@@ -1,8 +1,22 @@
 body {
     background-color: #000000;
-    color: #000000;
-    font-family: "Arial", sans-serif;
-    font-size: 12px;
+    color: #ffffff;
+    font-family: monospace;
     margin: 0;
     padding: 0;
+    font-family: monospace;
+}
+
+/* Center the body class at the center of the page */
+.container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position: relative;
+    text-align: center;
+}
+
+.text {
+    margin: 5px auto;
+    display: list-item;
+    position: inherit;
 }
