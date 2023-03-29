@@ -1,24 +1,68 @@
-ul{
-	background-color:black;
-	color:white;
-	list-style-type:none;
-	margin:0;
-	padding:0;
-   overflow:hidden;
+  #header ul {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-gap: 24px;
+    justify-items: center;
+    margin: auto;
+    background-color:black;
+		color:white;
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		overflow:hidden;
   }
-  
-  
-  li a {
-	color:white;
-   float:left;
-	width:90px;
-	padding:8px 16px;
-	margin:5px;
-	text-align:center;
+
+  #header a {
+    color: white;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+  }
+
+  #header a:hover {
+    box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+  }
+
+  #header li a {
+		color:white;
+		float:left;
+		width:90px;
+		padding:8px 16px;
+		margin:5px;
+		text-align:center;
+	}
+
+  #header li:hover ~ li p {
+    animation: wave-animation 0.3s infinite;
+  }
+
+  #header li a:hover{
+		background-color:orange;
+		color:white;
 	}
   
-  li a:hover{
-	background-color:orange;
-	color:white;
-   
+  @keyframes wave-animation {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(20deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+  }
+  
+  /* Center the header div at the top */
+  #header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
   }
