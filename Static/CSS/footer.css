@@ -31,13 +31,13 @@
   text-align:center;
 }
 
-#footer li:hover ~ li p {
-  animation: wave-animation 0.3s infinite;
-}
-
 #footer li a:hover{
   background-color:orange;
   color:white;
+}
+
+#footer li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
 }
 
 /* Annimation of the hand emoji */
@@ -56,7 +56,7 @@
 
 /* Center the footer div at the bottom */
 #footer {
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;

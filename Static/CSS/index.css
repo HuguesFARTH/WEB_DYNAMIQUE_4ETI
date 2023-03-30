@@ -9,14 +9,16 @@ body {
 
 /* Center the body class at the center of the page */
 .container {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     position: relative;
     text-align: center;
+    z-index: -1;
 }
 
 .text {
     margin: 5px auto;
     display: list-item;
     position: inherit;
+
 }
