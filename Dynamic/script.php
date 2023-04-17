@@ -12,6 +12,4 @@ function request ($sql) {
 }
 
 function 
-
-
 ?>
