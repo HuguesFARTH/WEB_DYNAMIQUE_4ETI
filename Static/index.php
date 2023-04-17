@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="CSS/index.css"></link>
+<link rel="stylesheet" href="css/index.css"></link>
 <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     crossorigin="anonymous">
@@ -16,65 +16,7 @@
 <body>
     <div id="header"></div>
     <div class="container">
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> Coucou C est le text pour tester </div>
-        <div class="text">  aaa Coucou C est le text pour tester aaa</div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
-        <div class="text"> tester php </div>
+
         <?php 
  
         echo "Hello World";
