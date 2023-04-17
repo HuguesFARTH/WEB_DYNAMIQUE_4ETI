@@ -22,7 +22,7 @@
         echo "Hello World";
 
         ?>
-        <a href="test.php"></a>
+        <a href="test.php">to php test</a>
     </div>
     
     <div id="footer"></div> 
