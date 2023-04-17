@@ -6,7 +6,7 @@
 <body>
     <div id="header">
     <?php
-echo readfile("./header.html");
+echo readfile("./html/header.html");
 ?>
     </div>
     <div class="container">
@@ -21,7 +21,7 @@ echo readfile("./header.html");
     
     <div id="footer">
     <?php
-echo readfile("./footer.html");
+echo readfile("./html/footer.html");
 ?>
     </div> 
 </body>
