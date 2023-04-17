@@ -5,23 +5,14 @@
 
 <body>
     <div id="header">
-    <?php
-echo readfile("./html/header.html");
-?>
+    <?php include "./html/header.html" ?>
     </div>
     <div class="container">
-
-        <?php 
- 
-        echo "Hello World";
-
-        ?>
+        <?php  echo "Hello World"; ?>
         <a href="test.php">to php test</a>
     </div>
     
     <div id="footer">
-    <?php
-echo readfile("./html/footer.html");
-?>
+    <?php include "./html/footer.html" ?>
     </div> 
 </body>
