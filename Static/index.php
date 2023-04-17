@@ -4,14 +4,14 @@
     src="https://code.jquery.com/jquery-3.3.1.js"
     crossorigin="anonymous">
 </script>
-<!-- <script> 
+<script> 
     $(function(){
       $("#header").load("./html/header.html"); 
     });
     $(function(){
       $("#footer").load("./html/footer.html"); 
     });
-</script> -->
+</script>
 
 <body>
     <div id="header"></div>
