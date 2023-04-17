@@ -76,5 +76,10 @@
         <div class="text"> tester php </div>
         <div class="text"> tester php </div>
     </div>
+    <?php 
+ 
+echo "Hello World";
+
+?>
     <div id="footer"></div> 
 </body>
