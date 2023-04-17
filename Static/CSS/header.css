@@ -1,15 +1,16 @@
-  #header ul {
+#header ul {
     display: inline-grid;
     grid-auto-flow: column;
     grid-gap: 24px;
     justify-items: center;
     margin: auto;
     background-color:black;
-		color:white;
-		list-style-type:none;
-		margin:0;
-		padding:0;
-		overflow:hidden;
+    color:white;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    
   }
 
   #header a {
@@ -31,38 +32,21 @@
 		text-align:center;
 	}
 
-  #header li:hover ~ li p {
-    animation: wave-animation 0.3s infinite;
-  }
-
   #header li a:hover{
 		background-color:orange;
 		color:white;
 	}
   
-  @keyframes wave-animation {
-    0%,
-    100% {
-      transform: rotate(0deg);
-    }
-    25% {
-      transform: rotate(20deg);
-    }
-    75% {
-      transform: rotate(-15deg);
-    }
-  }
-  
   /* Center the header div at the top */
   #header {
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     width: 100%;
-    height: 50px;
+    padding: 14px 16px;
     background-color: black;
     color: white;
     text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
+    font-size: 20px;
+    z-index: 10;
   }
