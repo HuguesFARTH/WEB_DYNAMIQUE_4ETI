@@ -9,6 +9,7 @@
     <div class="container">
         <input class="" placeholder="Que recherchez-vous ?" value="">
         <div class="hidden_child_div">Catégorie de pathologie
+        <div class="hidden_child_div">Caractéristiques
             <div class="">
                 <ol>
                     <li>

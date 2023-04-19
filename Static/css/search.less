@@ -1,7 +1,9 @@
+.hidden_child_div{
+    display: flex;
+}
 
 .hidden_child_div div{
     display: none;
-    background-color:orange;
     color:white;
     height: 0px;
     width: 0px;
@@ -9,10 +11,9 @@
 }
 
 .hidden_child_div:hover div{
-    display: block;
-    background-color:orange;
+    display: flex;
     color:white;
     height: 100%;
     width: 100%;
-    transition: 0.5s linear 0s;
+    transition: 1s linear 0s;
 }
