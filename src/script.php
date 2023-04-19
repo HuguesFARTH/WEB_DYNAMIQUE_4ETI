@@ -22,13 +22,14 @@ function requestSQl($request) {
 
       // Traitement des résultats
       $valren ="";
-      while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        // log row variable
-        $valren = $valren . "<script>console.log(" . json_encode($row) . ");</script>";
-        $valren = $valren . "Name : " .$row["name"] . "Pathologie : " . $row["pathodesc"] . "Symptôme : " . $row["symptdesc"] . "Type : " . $row["pathotype"] . "ID : " . $row["pathoidp"] . "<br>";
-        // $valren = $valren . "Name : " . $row["name"] . "<br>";
-      }
+      // while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+      //   // log row variable
+      //   $valren = $valren . "<script>console.log(" . json_encode($row) . ");</script>";
+      //   $valren = $valren . "Name : " .$row["name"] . "Pathologie : " . $row["pathodesc"] . "Symptôme : " . $row["symptdesc"] . "Type : " . $row["pathotype"] . "ID : " . $row["pathoidp"] . "<br>";
+      //   // $valren = $valren . "Name : " . $row["name"] . "<br>";
+      // }
       // Fermeture de la connexion
+      $valren = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $db = null;
 
       return $valren;
