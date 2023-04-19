@@ -14,6 +14,9 @@ switch ($_GET['page']) {
     case 'home':
         $smarty->display('./html/home.tpl');
         break;
+    case 'search':
+        $smarty->display('./html/search.tpl');
+        break;
     default:
         $smarty->display('./html/home.tpl'); // a changer plus tard
         break;

@@ -5,8 +5,8 @@
 
 <div id="header">
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="search.php">search</a></li>
+    <li><a href="/?page=home">Home</a></li>
+    <li><a href="/?page=search">search</a></li>
     <li><a href="#">Profile</a></li>
     <li><a href="https://www.google.com/">About</a></li>
   </ul>
