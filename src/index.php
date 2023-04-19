@@ -19,6 +19,12 @@ switch ($_GET['page']) {
         break;
     case 'script':
         require_once('./script.php');
+        $request = "SELECT keywords.name, patho.idp, patho.type, patho.desc, symptome.desc FROM symptpatho
+                    INNER JOIN patho ON patho.idp = symptpatho.idp
+                    INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
+                    INNER JOIN keywords ON keysympt.idk = keywords.idk
+                    INNER JOIN symptome ON symptome.ids = symptpatho.ids
+                    WHERE keywords.name in ('voix','vomissement')";
         $smarty->assign('result', requestSQL($request));
         // $smarty->display();
         break;
