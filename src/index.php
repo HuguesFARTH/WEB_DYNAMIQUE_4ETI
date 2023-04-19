@@ -1,6 +1,8 @@
 <?php
 // Note : Smarty a un 'S' majuscule
 require_once('../libs/Smarty.class.php');
+require_once('./script.php');
+
 $smarty = new Smarty();
 session_start();
 
@@ -18,7 +20,6 @@ switch ($_GET['page']) {
         $smarty->display('./html/search.tpl');
         break;
     case 'script':
-        require_once('./script.php');
         $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
                     INNER JOIN patho ON patho.idp = symptpatho.idp

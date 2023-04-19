@@ -1,15 +1,14 @@
 <?php 
+require_once('./script.php');
 
-$sql_get_user = "SELECT * FROM users WHERE email = :email AND password = :password";
-$sql_args = array(
-    email => $_POST['email'],
-    password => $_POST['password']
-);
+$sql_get_user = "SELECT * FROM users WHERE email = :email";
+$sql_args = $_POST['email']
+$result = requestSQL($request, $sql_args);
 
 
-if(isset($_POST['email']) == 'pl@cpe.fr'){
+if(isset($result[0]['password']) == $_POST['password']){
     session_start();
-    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['user'] = $result
     header('Location: /?page=home');
 };
 
