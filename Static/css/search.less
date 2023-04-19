@@ -6,11 +6,14 @@
     outline:none;
     box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    transition:all 0.5s linear 0s;
 }
 .hidden_child_div:hover{
     box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
 }
 .hidden_child_div div{
+    position: absolute;
+    list-style-type: none;
     display: none;
     color:white;
     height: 0px;
@@ -23,5 +26,5 @@
     color:white;
     height: 100%;
     width: 100%;
-    transition: 1s linear 0s;
+    transition:all 0.5s linear 0s;
 }
