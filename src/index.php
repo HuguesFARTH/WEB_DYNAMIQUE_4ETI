@@ -25,7 +25,8 @@ switch ($_GET['page']) {
                     INNER JOIN keywords ON keysympt.idk = keywords.idk
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
                     WHERE keywords.name in ('voix','vomissement')";
-        $smarty->assign('result', requestSQL($request));
+        // $smarty->assign('result', requestSQL($request));
+        echo (requestSQL($request));
         // $smarty->display();
         break;
     default:
