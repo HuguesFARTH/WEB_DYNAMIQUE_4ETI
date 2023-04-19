@@ -18,7 +18,9 @@ switch ($_GET['page']) {
         $smarty->display('./html/search.tpl');
         break;
     case 'script':
-        $smarty->display('./script.php');
+        require_once('./script.php');
+        $smarty->assign('result', requestSQL($request));
+        // $smarty->display();
         break;
     default:
         $smarty->display('./html/home.tpl'); // a changer plus tard

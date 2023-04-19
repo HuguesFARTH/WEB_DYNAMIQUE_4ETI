@@ -30,6 +30,6 @@ function requestSQl($request) {
       return $valren;
     }   
     
-echo(requestSQL($request));
+// echo(requestSQL($request));
 
 ?>
