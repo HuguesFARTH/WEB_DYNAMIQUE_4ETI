@@ -22,7 +22,7 @@
             <input class="button" type="submit" value="Connexion">
         </form>
         <h3 class="not-register">Pas encore inscrit ?
-        <a href="index.php?page=register">Inscrit toi ici !</a>
+        <a href="/?page=register">Inscrit toi ici !</a>
         </h3>
     </div>
 </body>
