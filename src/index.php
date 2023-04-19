@@ -33,7 +33,7 @@ switch ($_GET['page']) {
         //     $txt = $txt . "Name : " .$valren[$i]["name"] . "Pathologie : " . $valren[$i]["pathodesc"] . "Symptôme : " . $valren[$i]["symptdesc"] . "Type : " . $valren[$i]["pathotype"] . "ID : " . $valren[$i]["pathoidp"] . "<br>";
         // }
         // echo ($txt);
-        $txt = json_encode($valren);
+        $txt = array(json_encode($valren));
         $smarty->display('./html/pathologie.tpl', $txt);
         break;
     default:
