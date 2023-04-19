@@ -39,7 +39,6 @@
             <div class="dropdown">
                 Caractéristique.s
                 <div class="dropdown-content">
-                    
                         <li>
                             <input id="car_int" type="checkbox" value="car_int">
                             <Label for='car_int'>interne</Label>
