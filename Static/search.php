@@ -36,9 +36,9 @@
                     </ol>
                 </div>
             </div>
-            <div class="hidden_child_div">
+            <div class="dropdown">
                 Caractéristique.s
-                <div class="">
+                <div class="dropdown-content">
                     <ol>
                         <li>
                             <input id="car_int" type="checkbox" value="car_int">
