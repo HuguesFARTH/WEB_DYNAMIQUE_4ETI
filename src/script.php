@@ -22,7 +22,10 @@ function requestSQl($request) {
       // Traitement des résultats
       $valren ="";
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $valren = $valren . "Pathologie : " . $row["patho.desc"] . "Symptôme : " . $row["symptome.desc"] . "Type : " . $row["patho.type"] . "ID : " . $row["patho.idp"] . "<br>";
+        // log row variable
+        $valren = $valren . "<script>console_log(" . json_encode($row) . ");</script>";
+        // $valren = $valren . "Name : " .$row["name"] . "Pathologie : " . $row["patho.desc"] . "Symptôme : " . $row["symptome.desc"] . "Type : " . $row["patho.type"] . "ID : " . $row["patho.idp"] . "<br>";
+        $valren = $valren . "Name : " . $row["name"] . "<br>";
       }
       // Fermeture de la connexion
       $db = null;
@@ -30,6 +33,6 @@ function requestSQl($request) {
       return $valren;
     }   
     
-echo(requestSQL($request));
+// echo(requestSQL($request));
 
 ?>
