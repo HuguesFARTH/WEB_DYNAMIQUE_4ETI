@@ -6,7 +6,7 @@
 
     <div class="search-container">
         <div class="filter_menu">
-            <form>
+            <form method="post"> {* ou get ? avec du js ?*}
                 <input class="" placeholder="Que recherchez-vous ?" value="">
                 <div class="dropdown">
                     Catégorie de pathologie
@@ -63,7 +63,7 @@
                         
                     </div>
                 </div>
-                <input type="submit" value="Submit" id="submit-button">
+                <input type="submit" value="Submit" id="submit-button" hidden>
                 <label for="submit-button">Rechercher</label>
             </form>
         </div>
