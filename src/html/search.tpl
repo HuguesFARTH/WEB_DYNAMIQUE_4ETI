@@ -5,7 +5,7 @@
 {include file="html/header.tpl"}
 <body>
 
-    <div class="container">
+    <div class="search-container">
         <div class="filter_menu">
             <input class="" placeholder="Que recherchez-vous ?" value="">
             <div class="dropdown">
