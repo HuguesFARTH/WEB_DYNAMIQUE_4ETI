@@ -1,12 +1,17 @@
 
 .hidden_child_div div{
+    display: none;
     background-color:orange;
     color:white;
     height: 0px;
+    width: 0px;
+    transition: height 0.5s linear 0s;
 }
 
 .hidden_child_div:hover div{
+    display: flex;
     background-color:orange;
     color:white;
-    height: 20%;
+    height: 100%;
+    width: 100%;
 }
