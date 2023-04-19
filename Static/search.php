@@ -9,9 +9,9 @@
     <div class="container">
         <div class="filter_menu">
             <input class="" placeholder="Que recherchez-vous ?" value="">
-            <div class="hidden_child_div">
-                <button class="dropbtn">Catégorie de pathologie</button>
-                <div class="">
+            <div class="dropdown">
+                Catégorie de pathologie
+                <div class="dropdown-content">
                     <ol>
                         <li>
                             <input id="patho_mer" type="checkbox" value="patho_mer">
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="hidden_child_div">
-                <button class="dropbtn">Caractéristique.s</button>
+                Caractéristique.s
                 <div class="">
                     <ol>
                         <li>
