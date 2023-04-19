@@ -22,7 +22,7 @@ function requestSQl($request) {
       // Traitement des résultats
       $valren ="";
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $valren = $valren . "ID : " . $row["id"] . " - Nom : " . $row["nom"] . "<br>\n";
+        $valren = $valren . "Symptômes : " . $row["keywords.name"] . "<br>";
       }
       // Fermeture de la connexion
       $db = null;
