@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <input type="submit" value="Submit" id="submit-button" hidden>
-                <label for="submit-button">Rechercher</label>
+                <label for="submit-button" class="submit-button">Rechercher</label>
             </form>
         </div>
         <div class="result">
