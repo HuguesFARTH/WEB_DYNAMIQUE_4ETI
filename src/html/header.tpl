@@ -9,6 +9,6 @@
     <li><a href="/?page=search">search</a></li>
     <li><a href="#">Profile</a></li>
     <li><a href="https://www.google.com/">About</a></li>
-    {* {$smarty.session.user.email} *}
+    <li>{$smarty.session.user.email}</li>
   </ul>
 </div>
