@@ -31,7 +31,9 @@
                             <input id="patho_vaiss" type="checkbox" value="patho_vaiss">
                             <Label for="patho_vaiss">Pathologies des merveilleux vaisseaux</Label>
                         </li>
-                    
+                        <li>
+                            <input id="submit" type="submit" value="submit">
+                            <Label for="submit">Rechercher</Label>                    
                 </div>
             </div>
             <div class="dropdown">
