@@ -29,7 +29,7 @@ function requestSQl($request) {
       //   // $valren = $valren . "Name : " . $row["name"] . "<br>";
       // }
       // Fermeture de la connexion
-      $valren = json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+      $valren = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $db = null;
 
       return $valren;

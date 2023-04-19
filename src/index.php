@@ -29,7 +29,7 @@ switch ($_GET['page']) {
         // $smarty->assign('result', requestSQL($request));
         $valren = requestSQL($request);
         $txt = "";
-        for ($i = 0; $i < count($valren, COUNT_RECURSIVE); $i++) {
+        for ($i = 0; $i < count($valren); $i++) {
             $txt = $txt . "Name : " .$valren[$i]["name"] . "Pathologie : " . $valren[$i]["pathodesc"] . "Symptôme : " . $valren[$i]["symptdesc"] . "Type : " . $valren[$i]["pathotype"] . "ID : " . $valren[$i]["pathoidp"] . "<br>";
         }
         echo ($txt);
