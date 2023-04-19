@@ -12,7 +12,7 @@
             <div class="dropdown">
                 Catégorie de pathologie
                 <div class="dropdown-content">
-                    <ol>
+                    
                         <li>
                             <input id="patho_mer" type="checkbox" value="patho_mer">
                             <Label for='patho_mer'>Pathologies de méridien</Label>
@@ -33,13 +33,13 @@
                             <input id="patho_vaiss" type="checkbox" value="patho_vaiss">
                             <Label for="patho_vaiss">Pathologies des merveilleux vaisseaux</Label>
                         </li>
-                    </ol>
+                    
                 </div>
             </div>
             <div class="dropdown">
                 Caractéristique.s
                 <div class="dropdown-content">
-                    <ol>
+                    
                         <li>
                             <input id="car_int" type="checkbox" value="car_int">
                             <Label for='car_int'>interne</Label>
@@ -64,7 +64,7 @@
                             <input id="car_froid" type="checkbox" value="car_froid">
                             <Label for="car_froid">froid</Label>
                         </li>
-                    </ol>
+                    
                 </div>
             </div>
         </div>
