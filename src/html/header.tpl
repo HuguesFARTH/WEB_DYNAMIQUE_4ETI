@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<link rel="stylesheet/less" type="text/css" href="css/index.less"></link>
-<link rel="stylesheet/less" type="text/css" href="css/header.less"></link>
+<link type="text/css" href="css/index.less"></link>
+<link type="text/css" href="css/header.less"></link>
     
 
 <div id="header">
