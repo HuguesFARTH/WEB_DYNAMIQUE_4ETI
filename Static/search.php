@@ -9,7 +9,6 @@
     <div class="container">
         <input class="" placeholder="Que recherchez-vous ?" value="">
         <div class="hidden_child_div">Catégorie de pathologie
-        <div class="hidden_child_div">Caractéristiques
             <div class="">
                 <ol>
                     <li>
@@ -33,10 +32,38 @@
                         <Label for="patho_vaiss">Pathologies des merveilleux vaisseaux</Label>
                     </li>
                 </ol>
-                
             </div>
         </div>
-
+        <div class="hidden_child_div">Caractéristique.s
+            <div class="">
+                <ol>
+                    <li>
+                        <input id="car_int" type="checkbox" value="car_int">
+                        <Label for='car_int'>interne</Label>
+                    </li>
+                    <li>
+                        <input id="car_ext" type="checkbox" value="car_ext">
+                        <Label for='car_ext'>externe</Label>
+                    </li>
+                    <li>    
+                        <input id="car_plein" type="checkbox" value="car_plein">
+                        <Label for="car_plein">plein</Label>
+                    </li>
+                    <li>
+                        <input id="car_vide" type="checkbox" value="car_vide">
+                        <Label id="car_vide">vide</Label>
+                    </li>
+                    <li>
+                        <input id="car_chaud" type="checkbox" value="car_chaud">
+                        <Label for="car_chaud">chaud</Label>
+                    </li>
+                    <li>
+                        <input id="car_froid" type="checkbox" value="car_froid">
+                        <Label for="car_froid">froid</Label>
+                    </li>
+                </ol>
+            </div>
+        </div>
     </div>
     <div id="footer">
     <?php include "./html/footer.html" ?>
