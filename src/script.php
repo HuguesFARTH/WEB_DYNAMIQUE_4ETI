@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="css/index.less"></link>
+<?php
 
-
-
-<body>
-    <div id="header">
-    <?php include "./html/header.html" ?>
-    </div>
-    <div class="container">
-        <?php  echo "<p>Hello World</p>"; ?>
-        <a href="test.php">to php test</a>
-        <?php 
-          
 $request = "SELECT keywords.name, patho.idp, patho.type, patho.desc, symptome.desc FROM symptpatho
 INNER JOIN patho ON patho.idp = symptpatho.idp
 INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
@@ -34,7 +22,7 @@ function requestSQl($request) {
       // Traitement des résultats
       $valren ="";
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $valren = $valren . "ID : " . $row["id"] . " - Nom : " . $row["nom"] . "<br>\n";
+        $valren = $valren . "Symptômes : " . $row["keywords.name"] . "<br>";
       }
       // Fermeture de la connexion
       $db = null;
@@ -43,11 +31,5 @@ function requestSQl($request) {
     }   
     
 echo(requestSQL($request));
-      
-        ?>
-    </div>
-    
-    <div id="footer">
-    <?php include "./html/footer.html" ?>
-    </div> 
-</body>
+
+?>
