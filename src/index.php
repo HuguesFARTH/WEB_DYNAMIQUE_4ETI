@@ -6,5 +6,5 @@ $smarty = new Smarty();
 
 
 $smarty->display('./html/login.html')
-if $_POST['page'] =
+if 
 ?>
