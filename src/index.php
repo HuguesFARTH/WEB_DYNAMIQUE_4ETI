@@ -26,14 +26,11 @@ switch ($_GET['page']) {
                     INNER JOIN keywords ON keysympt.idk = keywords.idk
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
                     WHERE keywords.name in ('voix','vomissement')";
-        // $smarty->assign('result', requestSQL($request));
-        $valren = requestSQL($request);
-        // $txt = "";
-        // for ($i = 0; $i < count($valren); $i++) {
-        //     $txt = $txt . "Name : " .$valren[$i]["name"] . "Pathologie : " . $valren[$i]["pathodesc"] . "Symptôme : " . $valren[$i]["symptdesc"] . "Type : " . $valren[$i]["pathotype"] . "ID : " . $valren[$i]["pathoidp"] . "<br>";
-        // }
-        // echo ($txt);
-        $txt = array(json_encode($valren));
+        $valren = requestSQL($request, null, "acudb");
+        $txt = "";
+        for ($i = 0; $i < count($valren); $i++) {
+            $txt = $txt . "Name : " .$valren[$i]["name"] . "Pathologie : " . $valren[$i]["pathodesc"] . "Symptôme : " . $valren[$i]["symptdesc"] . "Type : " . $valren[$i]["pathotype"] . "ID : " . $valren[$i]["pathoidp"] . "<br>";
+        }
         $smarty->display('./html/pathologie.tpl', $txt);
         break;
     default:
