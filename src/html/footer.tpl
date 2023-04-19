@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/footer.less"></link>
+<link rel="stylesheet" href="css/footer.less"></link>
   
 <!-- Site footer -->
 <div id="footer">

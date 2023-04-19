@@ -3,8 +3,6 @@
 require_once('../libs/Smarty.class.php');
 $smarty = new Smarty();
 
-//$smarty->display('./html/header.tpl');
-//$smarty->display('./html/footer.tpl');
 
 switch ($_GET['page']) {
     case 'login':
