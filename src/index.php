@@ -28,11 +28,12 @@ switch ($_GET['page']) {
                     WHERE keywords.name in ('voix','vomissement')";
         // $smarty->assign('result', requestSQL($request));
         $valren = requestSQL($request);
-        $txt = "";
-        for ($i = 0; $i < count($valren); $i++) {
-            $txt = $txt . "Name : " .$valren[$i]["name"] . "Pathologie : " . $valren[$i]["pathodesc"] . "Symptôme : " . $valren[$i]["symptdesc"] . "Type : " . $valren[$i]["pathotype"] . "ID : " . $valren[$i]["pathoidp"] . "<br>";
-        }
+        // $txt = "";
+        // for ($i = 0; $i < count($valren); $i++) {
+        //     $txt = $txt . "Name : " .$valren[$i]["name"] . "Pathologie : " . $valren[$i]["pathodesc"] . "Symptôme : " . $valren[$i]["symptdesc"] . "Type : " . $valren[$i]["pathotype"] . "ID : " . $valren[$i]["pathoidp"] . "<br>";
+        // }
         // echo ($txt);
+        $txt = json_encode($txt);
         $smarty->display('./html/pathologie.tpl', $txt);
         break;
     default:
