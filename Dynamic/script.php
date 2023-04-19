@@ -1,6 +1,8 @@
 <?php
 
-function request ($sql) {
+function request ($user, $passwd, $sql) {
+    $dbh = new PDO($user, $passwd);
+
     $dbh->beginTransaction();
     try {
         $sth = $dbh->prepare($sql);
@@ -10,6 +12,4 @@ function request ($sql) {
         $dbh->rollback();
 }
 }
-
-function 
 ?>
