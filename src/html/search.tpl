@@ -1,6 +1,5 @@
-<!DOCTYPE html>
 {* <link rel="stylesheet" href="css/index.less"></link> *}
-<link rel="stylesheet" href="css/search.less"></link>
+<link rel="stylesheet/less" type="text/css" href="css/search.less"></link>
 
 {include file="html/header.tpl"}
 <body>
