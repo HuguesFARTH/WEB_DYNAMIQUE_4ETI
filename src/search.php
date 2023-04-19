@@ -121,9 +121,8 @@
                             <p>description de la pathologie</p>
                         </div>
                     </div>
-                    <div class="result_page_content_item">
-                        <div class="result_page_content_item_title">
-        
+                </div>
+            </div>
     </div>
     <div id="footer">
     <?php include "./html/footer.html" ?>
