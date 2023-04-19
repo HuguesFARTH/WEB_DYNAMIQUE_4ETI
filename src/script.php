@@ -1,6 +1,7 @@
 <?php
 
-$request = "SELECT keywords.name, patho.idp, patho.type, patho.desc, symptome.desc FROM symptpatho
+$request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pahtoDesc, symptome.desc as symptDesc
+FROM symptpatho
 INNER JOIN patho ON patho.idp = symptpatho.idp
 INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
 INNER JOIN keywords ON keysympt.idk = keywords.idk
@@ -24,7 +25,7 @@ function requestSQl($request) {
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         // log row variable
         $valren = $valren . "<script>console.log(" . json_encode($row) . ");</script>";
-        // $valren = $valren . "Name : " .$row["name"] . "Pathologie : " . $row["patho.desc"] . "Symptôme : " . $row["symptome.desc"] . "Type : " . $row["patho.type"] . "ID : " . $row["patho.idp"] . "<br>";
+        $valren = $valren . "Name : " .$row["name"] . "Pathologie : " . $row["pathoDesc"] . "Symptôme : " . $row["symptDesc"] . "Type : " . $row["pathoType"] . "ID : " . $row["pathoIdp"] . "<br>";
         // $valren = $valren . "Name : " . $row["name"] . "<br>";
       }
       // Fermeture de la connexion
