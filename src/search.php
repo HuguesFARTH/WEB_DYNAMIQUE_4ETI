@@ -4,7 +4,7 @@
 
 <body>
     <div id="header">
-    <?php include "./html/header.html" ?>
+    <?php include "./html/header.tpl" ?>
     </div>
     <div class="container">
         <div class="filter_menu">
@@ -125,6 +125,6 @@
             </div>
     </div>
     <div id="footer">
-    <?php include "./html/footer.html" ?>
+    <?php include "./html/footer.tpl" ?>
     </div> 
 </body>
