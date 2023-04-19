@@ -45,7 +45,7 @@ Création d'un site web pour une association d'acupuncture.
 
 1. Consultation des pathologies, critères de filtrage
  - une page permettant d’afficher la liste des pathologies + filtrage comme indiqué en introduction
- - optimiser au maximum votre solution en limitant autant que pos- sible les requêtes sur le serveur MySQL
+ - optimiser au maximum votre solution en limitant autant que possible les requêtes sur le serveur MySQL
  - libres dans le choix de l’interface graphique.
 
 2. Recherche de pathologies par mot–clef

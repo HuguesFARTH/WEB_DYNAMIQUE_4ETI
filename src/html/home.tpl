@@ -1,5 +1,5 @@
 
-    {include file="html/header.tpl"}
+{include file="html/header.tpl"}
 
 <body>
     <div class="container">
@@ -14,7 +14,6 @@
         </p>
     </div>
 
-
-    {include file="html/footer.tpl"}
+{include file="html/footer.tpl"}
     
     
