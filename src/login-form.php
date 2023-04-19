@@ -2,7 +2,7 @@
 require_once('./script.php');
 
 $sql_get_user = "SELECT * FROM users WHERE email = :email";
-$sql_args = $_POST['email'];
+$sql_args = array('email' => $_POST['email']);
 $result = requestSQL($request, $sql_args);
 
 
