@@ -5,5 +5,12 @@ $smarty = new Smarty();
 
 
 
-$smarty->display('./html/login.html')
+$smarty->display('./html/login.tpl');
+if (isset$_POST['register'] == 'register') {
+    echo $_POST['register'];
+}
+
+if($_POST['page']=='home'){
+    $smarty->display('./html/home.tpl');
+}
 ?>
