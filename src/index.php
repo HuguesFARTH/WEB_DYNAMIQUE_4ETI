@@ -6,5 +6,4 @@ $smarty = new Smarty();
 
 
 $smarty->display('./html/login.html')
-if 
 ?>
