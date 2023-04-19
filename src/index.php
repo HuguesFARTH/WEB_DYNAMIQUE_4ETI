@@ -33,7 +33,7 @@ switch ($_GET['page']) {
             $txt = $txt . "Name : " .$valren[$i]["name"] . "Pathologie : " . $valren[$i]["pathodesc"] . "Symptôme : " . $valren[$i]["symptdesc"] . "Type : " . $valren[$i]["pathotype"] . "ID : " . $valren[$i]["pathoidp"] . "<br>";
         }
         // echo ($txt);
-        $smarty->display('./html/pathologies.tpl', $txt);
+        $smarty->display('./html/pathologie.tpl', $txt);
         break;
     default:
         $smarty->display('./html/home.tpl'); // a changer plus tard
