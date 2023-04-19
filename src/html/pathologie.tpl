@@ -1,3 +1,7 @@
+{include file="header.tpl.php"}
+
 <div class="container-pathologie">
-    <?= patho ?>
+    {$txt}
 </div>
+
+{include file="footer.tpl.php"}
