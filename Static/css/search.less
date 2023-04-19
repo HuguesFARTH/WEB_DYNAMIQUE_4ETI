@@ -1,7 +1,11 @@
-.hidden_child_div{
+.filter_menu{
     display: flex;
+}
+
+.hidden_child_div{
+    height: 100%;
+    width: 100%;
     margin: 1%;
-    background-color: rgb(118, 118, 118);
     border:solid 7px #41403E;
     outline:none;
     box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
@@ -11,20 +15,30 @@
 .hidden_child_div:hover{
     box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
 }
+.hidden_child_div div ol{
+    list-style: none;
+}
+
+.hidden_child_div div ol ul{
+    border:solid 1% #41403E;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
 .hidden_child_div div{
-    position: absolute;
-    list-style-type: none;
-    display: none;
-    color:white;
     height: 0px;
     width: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    position: absolute;
+    text-align: left;
+    display: none;
+    color:white;
     transition:all 0.5s linear 0s;
 }
 
 .hidden_child_div:hover div{
     display: flex;
     color:white;
-    height: 100%;
-    width: 100%;
     transition:all 0.5s linear 0s;
 }
