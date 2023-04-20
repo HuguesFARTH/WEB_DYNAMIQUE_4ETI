@@ -6,7 +6,7 @@ $sql_args = array('email' => $_POST['email']);
 $result = requestSQL($sql_get_user, $sql_args);
 
 print_r($result);
-if(isset($result[0]['password']) == $_POST['password']){
+if($result[0]['password'] == $_POST['password']){
     echo 'connected';
     session_start();
     $_SESSION['user'] = $result;
