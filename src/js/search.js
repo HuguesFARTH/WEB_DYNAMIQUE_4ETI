@@ -7,13 +7,11 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     //récupérer toutes les input d'un formulaire
     var form = document.getElementById('form_menu');
     var inputs = form.getElementsByTagName('input');
+    console.log(inputs);
     var formData = new FormData();
     for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].type == 'text') {
-            formData.append(inputs[i].name, inputs[i].value);
-        }
+        formData.append(inputs[i].name, inputs[i].value);
     }
-    console.log(formData);
     console.log(form);
     console.log(formData);
     var xhr = new XMLHttpRequest();
