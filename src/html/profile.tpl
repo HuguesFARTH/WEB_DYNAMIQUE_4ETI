@@ -30,6 +30,11 @@
                 <button type="submit" class="button" >Modifier les infos</button>
             </div>
         </form>
+		<form action="/logout.php" method="post">
+            <div class="button-container">
+                <button type="submit" class="button" >deconnection</button>
+            </div>
+        </form>
 	</div>
 </div>
 
