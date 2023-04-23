@@ -14,7 +14,6 @@ if ($result != Array()){
         header('Location: /?page=home');
     };    
 } else {
-    print('login failed');
     header('Location: /?page=login');
  };
 
