@@ -27,7 +27,7 @@ switch ($_GET['page']) {
         break;
     case 'search':
         if($valid_session){
-            $content = $smarty->fetch('./html/search.tpl');
+            $content = $smarty->fetch('./html/search.html');
         }else{
             $content = $smarty->fetch('./html/home.tpl');
         }
