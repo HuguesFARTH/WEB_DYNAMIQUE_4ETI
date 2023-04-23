@@ -10,6 +10,7 @@
     <link rel="stylesheet" href='../css/login.less'>
   </head>
   <body>
+    <div id='container'>
     <h1>Mon profil</h1>
     <p>Nom : Jean</p>
     <p>Prénom : Dupont</p>
@@ -29,6 +30,7 @@
       }
     </script>
     <input type="password" id="password" value="monmotdepasse" style="display:none">
+    </div>
   </body>
 </html>
 
