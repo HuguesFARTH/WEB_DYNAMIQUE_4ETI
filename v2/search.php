@@ -6,7 +6,7 @@ $smarty = new Smarty();
 
 /* Reception du JSON */
 $jsonData = file_get_contents("php://input");
-var_dump($_POST);
+print_r($_POST);
 // /* Verifie si JSON est vide */
 // if (strlen($jsonData) > 0) {
 //     /* Decoder JSON */
