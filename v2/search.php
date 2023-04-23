@@ -19,9 +19,6 @@ if (strlen($jsonData) > 0) {
 //split string
 $keywords = explode(",",strtolower(preg_replace('/\s+/', ',', trim($data['keywords']))));
 $meridiens = $data['meridiens'];
-var_dump($data);
-var_dump($data['meridiens']);
-var_dump($categories);
 $categories = $data['categories'];
 $caracteristiques = $data['caracteristiques'];
 $sql_args=[];
@@ -57,7 +54,7 @@ $request.=" GROUP BY patho.idp, meridien.nom
 var_dump($request);
 $result = requestSQL($request, $sql_args);
 echo "Data received:";
-var_dump($data);
+var_dump($result);
 echo "<br>";
 foreach ($result as $key => $value) {
     // echo "<br>";
