@@ -19,18 +19,30 @@ if (strlen($jsonData) > 0) {
      
 //split string
 $keywords = explode(",",preg_replace('/\s+/', ',', trim($data['keywords'])));
-
-$request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
+//varifie si $keywords est vide
+var_dump($keywords);
+if (count($keywords) == 1 && $keywords[0] == ""){
+    $request = "SELECT patho.mer, keywords.name as keywordsName, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
+                    FROM symptpatho
+                    INNER JOIN patho ON patho.idp = symptpatho.idp
+                    INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
+                    INNER JOIN keywords ON keysympt.idk = keywords.idk
+                    INNER JOIN symptome ON symptome.ids = symptpatho.ids";
+    $sql_args = null;
+}else{
+    $request = "SELECT patho.mer, keywords.name as keywordsName, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
                     INNER JOIN patho ON patho.idp = symptpatho.idp
                     INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
                     INNER JOIN keywords ON keysympt.idk = keywords.idk
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
                     WHERE keywords.name in (";
-$request .= implode(',', array_fill(0, count($keywords), '?'));
-$request .= ")";
-$sql_args = $keywords;
+    $request .= implode(',', array_fill(0, count($keywords), '?'));
+    $request .= ")";
+    $sql_args = $keywords;
+}
 $result = requestSQL($request, $sql_args);
+
 foreach ($result as $key => $value) {
     // echo "<br>";
     // echo "Patho id:".$value['pathoidp']."<br>";
