@@ -12,22 +12,18 @@
 <body class="login-page">
     <div class="login-box">
         <h2 class="heading-login-box">Inscription</h2>
-        <form action="/register-form" method="post">
+        <form action="/register-form.php" method="post">
             <div class="user-box">
-                <input class="user-box-input" type="text" required name="nom">
+                <input class="user-box-input" type="text" required name="last_name">
                 <label class="user-box-label">Nom</label>
             </div>
             <div class="user-box">
-                <input class="user-box-input" type="text" required name="prenom"> 
+                <input class="user-box-input" type="text" required name="name"> 
                 <label class="user-box-label">Prenom</label>
             </div>
             <div class="user-box">
                 <input class="user-box-input" type="email" required name="email" pattern="[a-zA-Z0-9._%+-]+@cpe\.fr"> 
                 <label class="user-box-label">Email (cpe)</label>
-            </div>
-            <div class="user-box">
-                <input class="user-box-input" type="number" required name="code"> 
-                <label class="user-box-label">Code de liaison</label>
             </div>
             <div class="user-box">
                 <input class="user-box-input" type="password" required name="password"> 
