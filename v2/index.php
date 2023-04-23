@@ -1,12 +1,15 @@
 <?php
 // Note : Smarty a un 'S' majuscule
 require_once('../libs/Smarty.class.php');
+require_once('./login_utils.php');
 
 $smarty = new Smarty();
 session_start();
+$valid_session = $is_valid_session();
 if(!isset($_GET['page'])){
     $_GET['page'] = "home";
 }
+
 switch ($_GET['page']) {
     case 'login':
         $content = $smarty->fetch('./html/login.tpl');
