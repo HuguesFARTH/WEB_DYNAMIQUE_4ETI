@@ -1,11 +1,8 @@
 <?php 
 require_once('./script.php');
+require_once('./login_utils.php');
 
-$sql_get_user = "SELECT * FROM users WHERE email = :email";
-$sql_args = array('email' => $_POST['email']);
-$result = requestSQL($sql_get_user, $sql_args);
-
-if(count($result) >= 1 && password_verify($_POST['password'], $result[0]['password'])){
+if(is_valid_user($_POST['email'], $_POST['password'])){
     session_start();
     $_SESSION['user'] = $result;
     header('Location: /?page=home');
