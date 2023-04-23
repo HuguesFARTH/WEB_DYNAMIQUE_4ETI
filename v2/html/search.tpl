@@ -5,8 +5,10 @@
 
  <div id="meridien_form" class="dropdown"> Meridiens <div class="dropdown-content">
     {foreach from=$meridiens item=$meridien}
-    <input id="{$meridien.name}" type="checkbox" value="{$meridien.name}" name="{$meridien.name}">
-    <Label for='{$meridien.name}'>{$meridien.name}</Label>
+      <li>
+        <input id="{$meridien.name}" type="checkbox" value="{$meridien.name}" name="{$meridien.name}">
+        <Label for='{$meridien.name}'>{$meridien.name}</Label>
+      </li>
     {/foreach}
     </div>
   </div>
