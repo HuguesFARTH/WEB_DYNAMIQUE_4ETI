@@ -27,8 +27,8 @@ switch ($_GET['page']) {
         break;
     case 'search':
         if($valid_session){
-            $meridies = getMeridiens()
-            $smarty->assign('valid_session',$valid_session);
+            $meridiens = getMeridiens()
+            $smarty->assign('meridiens',$meridiens);
             $content = $smarty->fetch('./html/search.tpl');
         }else{
             header('Location: /?page=home');
