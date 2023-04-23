@@ -17,7 +17,8 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'search.php', true);
     //send json formData
-    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+
     xhr.send(JSON.stringify(formData));
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
