@@ -1,9 +1,6 @@
 
 console.log('search.js loaded');
-
-document.getElementById('search_button').addEventListener('click', function (e) {
-    console.log("search button clicked");
-    e.preventDefault();
+function submit_search_form(){
     //récupérer toutes les input d'un formulaire
     var formData = {};
     formData['keywords'] = document.getElementById('keywords').value;
@@ -42,5 +39,11 @@ document.getElementById('search_button').addEventListener('click', function (e) 
             document.getElementById('result_page').innerHTML = xhr.responseText;
         }
     }
+}
+document.getElementById('search_button').addEventListener('click', function (e) {
+    console.log("search button clicked");
+    e.preventDefault();
+    submit_search_form();
 });
+submit_search_form();
 
