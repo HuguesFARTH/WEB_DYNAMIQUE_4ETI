@@ -1,13 +1,12 @@
 <?php 
 require_once('./script.php');
 
-$sql_get_user = "SELECT * FROM users WHERE email = :email";
+$sql_get_user = "SELECT password FROM users WHERE email = :email";
 $sql_args = array('email' => $_POST['email']);
 $result = requestSQL($sql_get_user, $sql_args);
-$hashSecure = password_hash($_POST['password'], PASSWORD_DEFAULT);
 echo $hashSecure;
-echo $result['password'];
-if(password_verify($hashSecure,$result['password'])){
+var_dump($result);
+if(password_verify($_POST['password'],$result['password'])){
     echo 'connected';
     session_start();
     $_SESSION['user'] = $result;
