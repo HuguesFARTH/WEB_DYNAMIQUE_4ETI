@@ -26,11 +26,19 @@ switch ($_GET['page']) {
         $content = $smarty->fetch('./html/home.tpl');
         break;
     case 'search':
-        $content = $smarty->fetch('./html/search.tpl');
+        if($valid_session){
+            $content = $smarty->fetch('./html/search.tpl');
+        }else{
+            $content = $smarty->fetch('./html/home.tpl');
+        }
         break;
     case 'profile':
-        $content = $smarty->fetch('./html/profile.tpl');
-            break;
+        if($valid_session){
+            $content = $smarty->fetch('./html/profile.tpl');
+        }else{
+            $content = $smarty->fetch('./html/home.tpl');
+        }
+        break;
     case 'profile_form' :
         $content = $smarty->fetch('./html/profile_form.tpl');
         break;
