@@ -1,6 +1,13 @@
 <?php
-//renvoie les données du formulaire de recherche
-if (isset($_POST)) {
-    print_r($_POST);
+
+header("Content-Type: application/json");
+echo $_POST['keywords'];
+$data = json_decode($_POST);
+ 
+echo "Hello $data";
+
+
+foreach ($_POST as $key => $value) {
+    echo "$key => $value";
 }
 ?>
