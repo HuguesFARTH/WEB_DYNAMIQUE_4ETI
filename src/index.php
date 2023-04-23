@@ -27,6 +27,7 @@ switch ($_GET['page']) {
                     INNER JOIN keywords ON keysympt.idk = keywords.idk
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
                     WHERE keywords.name in ('voix','vomissement')";
+      
         $valren = requestSQL($request, null, "acudb");
         $txt = "<script>console.log('PHP: " . $valren . "');</script>";
         for ($i = 0; $i < count($valren); $i++) {

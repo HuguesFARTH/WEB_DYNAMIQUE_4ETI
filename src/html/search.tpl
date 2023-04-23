@@ -1,11 +1,11 @@
 {* <link rel="stylesheet" href="css/index.less"></link> *}
 <link rel="stylesheet" href="css/search.less"></link>
-
+<link rel="stylesheet" href="css/search.less"></link>
 {* {include file="html/header.tpl"} *} {* on remettra plus tard *}
 <body>
 
     <div class="search-container">
-        <form class="filter_menu" method="post"> {* ou get ? avec du js ?*}
+        <form class="filter_menu" id="form_menu" method="post"> {* ou get ? avec du js ?*}
             <input class="" placeholder="Que recherchez-vous ?" value="">
             <div class="dropdown">
                 Catégorie de pathologie
@@ -62,8 +62,7 @@
                     
                 </div>
             </div>
-            <input type="submit" value="Submit" id="submit-button" hidden>
-            <label for="submit-button" class="submit-button">Rechercher</label>
+            <input type="submit" value="Rechercher" id="search_button">
         </form>
         <div class="result">
             <div class="result_page">
@@ -123,4 +122,5 @@
             </div>
     </div>
     {include file="html/footer.tpl"}
+    <script type="text/javascript" src="../js/search.js"></script>
 </body>
