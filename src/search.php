@@ -14,13 +14,10 @@ if (strlen($jsonData) > 0) {
         die('Données JSON invalides.');
 } else
     die('Aucune données JSON.');
-
-echo $data['keywords'];
-echo "\n";
      
 //split string
 $keywords = explode(",",preg_replace('/\s+/', '\',\'', trim($data['keywords'])));
-echo $keywords;
+echo implode(" ",$keywords);
 
 $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
