@@ -2,6 +2,7 @@
 console.log('search.js loaded');
 
 document.getElementById('search_button').addEventListener('click', function (e) {
+    console.log("search button clicked");
     e.preventDefault();
     var search = document.getElementById('search').value;
     console.log(search);
