@@ -30,6 +30,7 @@ if (count($keywords) == 0){
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids";
     $sql_args = null;
 }else{
+    echo "notvide";
     $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
                     INNER JOIN patho ON patho.idp = symptpatho.idp
