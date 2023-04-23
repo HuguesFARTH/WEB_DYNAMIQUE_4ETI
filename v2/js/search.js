@@ -11,7 +11,7 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     formData['category'] = [];
     for (var i = 0; i < inputs.length; i++) {
         if(inputs[i].checked){
-            formData['category'].append(inputs[i].value);
+            formData['category'].push(inputs[i].value);
         }
     }
     var form = document.getElementById('caracteristique_form');
@@ -19,7 +19,7 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     formData['caracteristique'] = [];
     for (var i = 0; i < inputs.length; i++) {
         if(inputs[i].checked){
-            formData['caracteristique'].append(inputs[i].value);
+            formData['caracteristique'].push(inputs[i].value);
         }
     }
     console.log(formData);
