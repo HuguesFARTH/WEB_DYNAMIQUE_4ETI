@@ -40,9 +40,9 @@ if (count($keywords) == 1 && $keywords[0] == ""){
     $sql_args = $keywords;
 }
 $result = requestSQL($request, $sql_args);
-echo "Data received:"
+echo "Data received:";
 var_dump($data);
-echo "<br>"
+echo "<br>";
 foreach ($result as $key => $value) {
     // echo "<br>";
     // echo "Patho id:".$value['pathoidp']."<br>";
