@@ -8,9 +8,4 @@
   {else}
     <li><a href="/?page=profile">Profile</a></li>
   {/if}
-  {if isset($smarty.session) && isset($smarty.session.user) && isset($smarty.session.user[0]['email'])} 
-    
-  {else}
-    <li>{$smarty.session.user[0]['email']}</li>
-  {/if}
 </ul>
