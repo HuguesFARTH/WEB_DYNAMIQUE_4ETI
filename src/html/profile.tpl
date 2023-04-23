@@ -11,11 +11,11 @@
   </head>
   <body>
     <div class='container'>
-    <h1>Mon profil</h1>
-    <p>Nom : Jean</p>
-    <p>Prénom : Dupont</p>
-    <p>Email : jean.dupont@gmail.com</p>
-    <p>
+    <h1 class='text'>Mon profil</h1>
+    <p class='text'>Nom : Jean</p>
+    <p class='text'>Prénom : Dupont</p>
+    <p class='text'>Email : jean.dupont@gmail.com</p>
+    <p class='text'>
       Mot de passe :
       <button onclick="togglePassword()">Afficher le mot de passe</button>
     </p>
