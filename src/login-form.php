@@ -14,7 +14,8 @@ if ($result != []){
         header('Location: /?page=home');
     };    
 } else {
-    print('login failed');
+    echo 'login failed';
+    header('Location: /?page=login');
 };
 
 ?>
