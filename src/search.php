@@ -1,8 +1,4 @@
 <?php
-
-header("Content-Type: application/json");
-echo $_POST['keywords'];
-foreach ($_POST as $key => $value) {
-    echo "$key => $value";
-}
+$request = json_decode(file_get_contents('php://input'), true);
+echo $request
 ?>
