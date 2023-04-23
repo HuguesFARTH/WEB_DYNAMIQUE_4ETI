@@ -6,6 +6,7 @@
       <a href="/?page=login">Profile</a>
     {else}
       <a href="/?page=profile">Profile</a>
+    {/if}
   </li>
   <li><a href="">About</a></li>
 </ul>
