@@ -51,10 +51,10 @@ if (count($keywords) == 1 && $keywords[0] == ""){
     
 $request.=" GROUP BY patho.idp, meridien.nom 
                 ORDER BY patho.idp;";
+$result = requestSQL($request, $sql_args);
 // echo "<br>";
 // var_dump($request);
 // echo "<br>";
-// $result = requestSQL($request, $sql_args);
 // echo "Data received:";
 // var_dump($result);
 // echo "<br>";
