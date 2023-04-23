@@ -6,7 +6,7 @@
  <div id="meridien_form" class="dropdown"> Catégorie de pathologie <div class="dropdown-content">
   {foreach from=$meridiens item=meridien}
   <input id="{meridien.nom}" type="checkbox" value="{meridien.nom}" name="{meridien.nom}">
-  <Label for='{meridien.nom}'>meridien.nom</Label>
+  <Label for='{meridien.nom}'>{meridien.nom}</Label>
   {/foreach}
   <li>
     <input id="patho_mer" type="checkbox" value="m" name="patho_mer">
