@@ -3,7 +3,7 @@
 <form class="filter_menu" id="form_menu" action="/search.php" method="post"> {* ou get ? avec du js ?*}
  <input id="keywords" class="" placeholder="Que recherchez-vous ?" value="">
  
- <div id="meridien_form" class="dropdown"> Catégorie de pathologie <div class="dropdown-content">
+ <div id="meridien_form" class="dropdown"> Meridiens <div class="dropdown-content">
   {foreach from=$meridiens item=$meridien}
   <input id="{$meridien.name}" type="checkbox" value="{$meridien.name}" name="{$meridien.name}">
   <Label for='{$meridien.name}'>{$meridien.name}</Label>
