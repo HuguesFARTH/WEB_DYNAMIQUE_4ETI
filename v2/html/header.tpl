@@ -8,7 +8,7 @@
   {else}
     <li><a href="/?page=profile">Profile</a></li>
     <li><a href="/logout.php">
-      <img src="img/logout.png" alt="logout" width="20" height="20"/>
+      <img src="images/logout.png" alt="logout" width="20" height="20"/>
       </a></li>
   {/if}
 </ul>
