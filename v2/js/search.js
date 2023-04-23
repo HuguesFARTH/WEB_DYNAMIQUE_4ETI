@@ -10,7 +10,7 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     console.log(inputs);
     var formData = {};
     for (var i = 0; i < inputs.length; i++) {
-        formData[inputs[i].id] = inputs[i].value;
+        formData[inputs[i].id] = inputs[i].checked;
     }
     console.log(form);
     console.log(formData);
