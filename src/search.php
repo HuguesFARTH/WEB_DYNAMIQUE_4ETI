@@ -1,3 +1,3 @@
 <?php
-echo $_POST[0];
+echo $_POST;
 ?>
