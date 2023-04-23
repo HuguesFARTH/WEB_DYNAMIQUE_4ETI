@@ -10,7 +10,7 @@
     <header>
       {include file="html/header.tpl"}
     </header>
-    <div class="container">
+    <div class="content">
       {$content}
     </div>
     <footer>
