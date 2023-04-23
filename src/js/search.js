@@ -6,6 +6,7 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     e.preventDefault();
     var form = document.getElementById('form_menu');
     var formData = new FormData(form);
+    console.log(form);
     console.log(formData);
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'search.php', true);
