@@ -1,7 +1,8 @@
-{include file="html/header.tpl"}
-<link rel="stylesheet" href="css/pathologie.less"/>
-<div class="container-pathologie">
-    {$txt}
+<div class="result_page_content_item">
+    <div class="result_page_content_item_title">
+        <h3>{$name}</h3>
+    </div>
+    <div class="result_page_content_item_description">
+        <p>{$pathodesc}</p>
+    </div>
 </div>
-
-{include file="html/footer.tpl"}
