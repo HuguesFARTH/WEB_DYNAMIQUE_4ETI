@@ -5,7 +5,7 @@ require_once('../libs/Smarty.class.php');
 $smarty = new Smarty();
 session_start();
 
-$smarty->display("html/header.tpl");
+$smarty->display("./html/header.tpl");
 switch ($_GET['page']) {
     case 'login':
         $smarty->display('./html/login.tpl');
@@ -43,9 +43,9 @@ switch ($_GET['page']) {
         $smarty->display('./html/pathologie.tpl');
         break;
     default:
-        $smarty->display('./html/home.tpl'); // a changer plus tard
+        $smarty->display('./html/home.tpl');
         break;
 }
 
-$smarty->display("html/footer.tpl");
+$smarty->display("./html/footer.tpl");
 ?>
