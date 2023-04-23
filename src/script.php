@@ -24,4 +24,16 @@ function requestSQl($request, $params=null, $dbname="acudb") {
       return $valren;
     }   
 
+
+function current_session() {
+  if (session_status() != 'PHP_SESSION_ACTIVE'){
+    return True;
+  } else {
+    return False;
+  }
+
+}
+
+
+
 ?>
