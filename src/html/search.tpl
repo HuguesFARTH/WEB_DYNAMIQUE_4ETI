@@ -5,7 +5,7 @@
 <body>
 
     <div class="search-container">
-        <form class="filter_menu" method="post"> {* ou get ? avec du js ?*}
+        <form class="filter_menu" id="form_menu" method="post"> {* ou get ? avec du js ?*}
             <input class="" placeholder="Que recherchez-vous ?" value="">
             <div class="dropdown">
                 Catégorie de pathologie
