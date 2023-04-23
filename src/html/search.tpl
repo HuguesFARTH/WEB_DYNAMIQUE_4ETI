@@ -64,8 +64,8 @@
             </div>
             <input type="submit" value="Rechercher" id="search_button">
         </form>
-        <div class="result">
-            <div class="result_page">
+        <div class="results">
+            <div class="result_page" id="result_page" >
                 <div class="result_page_title">
                     <h2>Resultat de la recherche</h2>
                 </div>
