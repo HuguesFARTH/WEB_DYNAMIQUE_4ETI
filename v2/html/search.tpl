@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../css/search.less">
+<link rel="stylesheet" href="css/search.less">
 </link>
 <form class="filter_menu" id="form_menu" action="/search.php" method="post"> {* ou get ? avec du js ?*}
  <input id="keywords" class="" placeholder="Que recherchez-vous ?" value="">
