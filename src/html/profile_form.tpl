@@ -23,12 +23,6 @@
 			<input id="email" type="email" name="email" required>
 		</div>
 
-
-		<div class="form-group">
-			<label for="Sender_psid">Code de liaison</label>
-			<input id="psid" type="number" name="code" required>
-		</div>
-
         <div class="form-group">
 			<label for="password">Password</label>
 			<input id="password" type="password" name="password" placeholder="votre mot de passe actuel" required>
