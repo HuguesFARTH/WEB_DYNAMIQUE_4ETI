@@ -11,4 +11,5 @@ if (strlen($jsonData) > 0) {
         die('Données JSON invalides.');
 } else
     die('Aucune données JSON.');
+echo $jsonData;
 ?>
