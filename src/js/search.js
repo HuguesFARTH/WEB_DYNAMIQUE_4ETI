@@ -8,15 +8,15 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     var form = document.getElementById('form_menu');
     var inputs = form.getElementsByTagName('input');
     console.log(inputs);
-    var formData = new FormData();
+    var formData = {};
     for (var i = 0; i < inputs.length; i++) {
-        formData.append(inputs[i].name, inputs[i].value);
+        formData[inputs[i].id] = inputs[i].value;
     }
     console.log(form);
     console.log(formData);
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'search.php', true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("Content-type", "application/json");
     xhr.send('formData=' + formData);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
