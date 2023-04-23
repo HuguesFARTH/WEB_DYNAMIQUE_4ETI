@@ -9,10 +9,10 @@ if(!isset($_GET['page'])){
 }
 switch ($_GET['page']) {
     case 'login':
-        $smarty->display('./html/login.tpl');
+        $content = $smarty->fetch('./html/login.tpl');
         break;
     case 'register':
-        $smarty->display('./html/register.tpl');
+        $content = $smarty->fetch('./html/register.tpl');
         break;
     case 'home':
         $content = $smarty->fetch('./html/home.tpl');
@@ -21,10 +21,10 @@ switch ($_GET['page']) {
         $content = $smarty->fetch('./html/search.html');
         break;
     case 'profile':
-            $smarty->display('./html/profile.tpl');
+        $content = $smarty->fetch('./html/profile.tpl');
             break;
     case 'profile_form' :
-        $smarty->display('./html/profile_form.tpl');
+        $content = $smarty->fetch('./html/profile_form.tpl');
         break;
     case 'script':
         $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
