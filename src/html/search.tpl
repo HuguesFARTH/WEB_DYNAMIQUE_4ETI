@@ -62,8 +62,7 @@
                     
                 </div>
             </div>
-            <input type="submit" value="submit" id="search_button">
-            <label for="submit-button" class="submit-button">Rechercher</label>
+            <input type="submit" value="Rechercher" id="search_button">
         </form>
         <div class="result">
             <div class="result_page">
