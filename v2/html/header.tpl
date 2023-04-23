@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <link rel="stylesheet" href="css/index.less"></link>
 <link rel="stylesheet" href="css/header.less"></link>
 <div id="header">
