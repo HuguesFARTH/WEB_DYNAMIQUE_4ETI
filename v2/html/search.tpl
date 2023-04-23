@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../css/search.less">
 </link>
-<form class="filter_menu" id="form_menu" method="post"> {* ou get ? avec du js ?*} <input id="keywords" class="" placeholder="Que recherchez-vous ?" value="">
+<form class="filter_menu" id="form_menu" action="/search.php" method="post"> {* ou get ? avec du js ?*} <input id="keywords" class="" placeholder="Que recherchez-vous ?" value="">
   <div class="dropdown"> Catégorie de pathologie <div class="dropdown-content">
       <li>
         <input id="patho_mer" type="checkbox" value="patho_mer">
