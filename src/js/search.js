@@ -22,7 +22,7 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     xhr.send('formData=' + formData);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            document.getElementById('results').innerHTML = xhr.responseText;
+            document.getElementById('result_page').innerHTML = xhr.responseText;
         }
     }
 });
