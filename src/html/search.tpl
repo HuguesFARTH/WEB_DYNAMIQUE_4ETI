@@ -1,7 +1,6 @@
 {* <link rel="stylesheet" href="css/index.less"></link> *}
 <link rel="stylesheet" href="css/search.less"></link>
 <link rel="stylesheet" href="css/search.less"></link>
-<script type="text/javascript" src="../js/search.js"></script>
 {* {include file="html/header.tpl"} *} {* on remettra plus tard *}
 <body>
 
@@ -124,4 +123,5 @@
             </div>
     </div>
     {include file="html/footer.tpl"}
+    <script type="text/javascript" src="../js/search.js"></script>
 </body>
