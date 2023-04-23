@@ -17,9 +17,8 @@ function is_valid_session(){
     session_start();
     if(isset($_SESSION) && isset($_SESSION['user']) && isset($_SESSION['user']['email']) && isset($_SESSION['user']['password'])){
         return is_valid_user($_SESSION['user']['email'], $_SESSION['user']['password']);
-    }else{
-        return false;
     }
+    return false;
 }
 
 ?>
