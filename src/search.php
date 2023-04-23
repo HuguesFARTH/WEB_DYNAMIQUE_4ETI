@@ -42,6 +42,6 @@ foreach ($result as $key => $value) {
         echo $k.$v;
         $smarty->assign($k,$v);
     }
+    $smarty->display('./html/pathologie.tpl');
 }
-$smarty->display('./html/pathologie.tpl');
 ?>
