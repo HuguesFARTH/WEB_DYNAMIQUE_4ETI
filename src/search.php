@@ -1,6 +1,8 @@
 <?php
 
 require_once('./script.php');
+require_once('../libs/Smarty.class.php');
+$smarty = new Smarty();
 
 /* Reception du JSON */
 $jsonData = file_get_contents("php://input");
