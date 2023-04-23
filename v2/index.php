@@ -10,7 +10,6 @@ $smarty->assign('valid_session',$valid_session);
 if(!isset($_GET['page'])){
     $_GET['page'] = "home";
 }
-
 switch ($_GET['page']) {
     case 'login':
         $content = $smarty->fetch('./html/login.tpl');
