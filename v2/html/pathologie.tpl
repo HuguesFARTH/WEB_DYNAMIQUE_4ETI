@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/pathologie.less"></link>
 <div class="pathologie_container">
     <div class="result_page_content_item_title">
-        <a>id={$pathoidp}</a>
+        <a>id:{$pathoidp}</a>
     </div>
     <div class="pathologie_desc">
         <p><b>Patologie:</b> {$pathodesc}</p>
