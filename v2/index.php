@@ -1,7 +1,6 @@
 <?php
 // Note : Smarty a un 'S' majuscule
 require_once('../libs/Smarty.class.php');
-require_once('./script.php');
 
 $smarty = new Smarty();
 session_start();
