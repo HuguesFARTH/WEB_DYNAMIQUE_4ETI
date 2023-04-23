@@ -62,7 +62,7 @@
                     
                 </div>
             </div>
-            <input type="submit" value="Submit" id="search_button" hidden>
+            <input type="submit" value="submit" id="search_button">
             <label for="submit-button" class="submit-button">Rechercher</label>
         </form>
         <div class="result">
