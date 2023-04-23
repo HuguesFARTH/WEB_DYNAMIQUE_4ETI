@@ -26,8 +26,9 @@ $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as p
                     INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
                     INNER JOIN keywords ON keysympt.idk = keywords.idk
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
-                    WHERE keywords.name in :keywords;";
-                    
+                    WHERE keywords.name in (";
+$request .= implode(',', array_fill(0, count($mots_cles), '?'));
+$request .= ")";
 $sql_args = $keywords;
 echo "<br>";
 var_dump($sql_args);
