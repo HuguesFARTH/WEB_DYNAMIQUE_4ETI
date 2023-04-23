@@ -7,6 +7,6 @@
         <p><b>Patologie:</b> {$pathodesc}</p>
         <p><i><b>type:</b> {$pathotype}</i></p>
         <p><b>Meridien:</b> {$mername}</p>
-        <p><b>Symptomes:</b> {$symptomes}</p>
+        <p><b>Symptomes:</b> {implode(",",array_unique(explode(",",$symptomes)))}</p>
     </div>
 </div>
