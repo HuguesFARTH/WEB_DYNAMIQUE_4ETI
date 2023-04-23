@@ -7,6 +7,14 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     //récupérer toutes les input d'un formulaire
     var formData = {};
     formData['keywords'] = document.getElementById('keywords').value;
+    var form = document.getElementById('meridien_form');
+    var inputs = form.getElementsByTagName('input');
+    formData['meridiens'] = [];
+    for (var i = 0; i < inputs.length; i++) {
+        if(inputs[i].checked){
+            formData['meridiens'].push(inputs[i].value);
+        }
+    }
     var form = document.getElementById('category_form');
     var inputs = form.getElementsByTagName('input');
     formData['categories'] = [];
