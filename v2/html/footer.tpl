@@ -1,16 +1,11 @@
-<link rel="stylesheet" href="css/footer.less"></link>
-<div id="footer">
-  <div>
-    <ul>
-      <li><a href="https://twitter.com/julesforrest">Twitter</a></li>
-      <li><a href="https://codepen.io/julesforrest">Codepen</a></li>
-      <li><a href="mailto:julesforrest@gmail.com">Email</a></li>
-      <li><a href="https://dribbble.com/julesforrest">Dribbble</a></li>
-      <li><a href="https://github.com/julesforrest">Github</a></li>
-      <li>
-        <p>👋</p>
-      </li>
-    </ul>
-  </div>
-</div>
-</body>
+<ul>
+  <li><a href="/?page=home">Home</a></li>
+  <li><a href="/?page=search">Search</a></li>
+  <li><a href="/?page=profile">Profile</a></li>
+  <li><a href="">About</a></li>
+  {if isset($smarty.session.user) && isset($smarty.session.user[0]['email'])} 
+    <li>Non Connecté</li>
+  {else}
+    <li>{$smarty.session.user[0]['email']}</li>
+  {/if}
+</ul>
