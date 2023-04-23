@@ -30,7 +30,7 @@ $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as p
 //enlève tous les espaces et split la string en array
 $keywords = preg_replace('/\s+/', ',', trim($data['keywords']));
 echo $keywords;
-//$sql_args = array('keywords' => $keywords);
-//$result = requestSQL($request, $sql_args);
-//echo $result;
+$sql_args = array('keywords' => "[$keywords]");
+$result = requestSQL($request, $sql_args);
+echo $result;
 ?>
