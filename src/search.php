@@ -16,6 +16,7 @@ if (strlen($jsonData) > 0) {
     die('Aucune données JSON.');
 
 echo $data['keywords'];
+echo "\n";
 /*
 $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
