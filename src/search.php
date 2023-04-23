@@ -33,5 +33,6 @@ $sql_args = $keywords;
 echo "<br>";
 var_dump($sql_args);
 $result = requestSQL($request, $sql_args);
-echo $result;
+
+var_dump($result);
 ?>
