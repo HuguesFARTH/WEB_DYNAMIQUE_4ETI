@@ -27,7 +27,7 @@ function requestSQl($request, $params=null, $dbname="acudb") {
 
 function current_session() {
   if (session_status() != 'PHP_SESSION_ACTIVE'){
-    return True;
+    return True;r
   } else {
     return False;
   }
@@ -36,7 +36,7 @@ function current_session() {
 function getMeridiens(){
   $request = "SELECT meridien.nom as name
               FROM meridien";
-  $valren = requestSQL($request, $params, "acudb");
+  $valren = requestSQL($request);
   return $valren;
 }
 ?>
