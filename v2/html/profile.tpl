@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="../css/profile.less">
 </head>
 
-<h2 class>Mon profil</h2>
+<h2 class='text'>Mon profil</h2>
 <div class="container-profile">
 	<div class="grid">
 		<div class="form-group a">
