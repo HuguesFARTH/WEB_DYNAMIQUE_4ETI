@@ -4,7 +4,7 @@
 {include file="html/header.tpl"}
 
 <h2 class>Mon profil</h2>
-<div class="container">
+<div class="container-profile">
 	<div class="grid">
 		<div class="form-group a">
 			<label for="name">Nom</label>
