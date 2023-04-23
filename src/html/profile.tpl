@@ -25,7 +25,7 @@
 			<label for="password">Password</label>
             <h3> ********** </h3>
 		</div>
-        <form action="/profile_change" method="post">
+        <form action="/?page=profile_form" method="post">
             <div class="button-container">
                 <button type="submit" class="button" >Modifier les infos</button>
             </div>
