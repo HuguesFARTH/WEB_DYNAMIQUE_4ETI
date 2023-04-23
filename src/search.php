@@ -26,7 +26,7 @@ $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as p
                     WHERE keywords.name in :keywords;"
          */           
 // convertie l'array $data['keywords'] en string pour la requete SQL
-$keywords = implode(",", $data['keywords']);
+$keywords = str_replace(" ", ",", $data['keywords']);
 echo $keywords;
 //$sql_args = array('keywords' => $keywords);
 //$result = requestSQL($request, $sql_args);
