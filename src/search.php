@@ -37,7 +37,7 @@ foreach ($result as $key => $value) {
     echo " Name:".$value['name'] . "<br> " ."Patho Desc:". $value['pathodesc'] . "<br> " . "Sympt Desc:".$value['symptdesc'] . "<br> " ."Patho Type:". $value['pathotype']. "<br>";
     
     foreach ($value as $k => $v) {
-        echo $k.$v
+        echo $k.$v;
         // $smarty->assign('name',$value['name']);
     }
     
