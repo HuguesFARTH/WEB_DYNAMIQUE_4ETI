@@ -11,7 +11,6 @@ if($result[0]['password'] == $_POST['password']){
     $_SESSION['user'] = $result;
     header('Location: /?page=home');
 } else {
-    print('login failed');
     header('Location: /?page=login');
  };
 
