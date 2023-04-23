@@ -6,7 +6,7 @@
 
 <h2>Modifier mon profil</h2>
 <div class="container-profile">
-    <form action="/profile_form" method="post">
+    <form action="/profile_form.php" method="post">
 	<div class="grid">
 		<div class="form-group">
 			<label for="name">Nom</label>
@@ -38,11 +38,6 @@
 	<div class="button-container">
 		<button type="submit" class="button">Enregister les modifications</button>
 	</div>
-	<% if (locals.error) { %>
-		<div class="error-profile">
-			<p class="error"><%= error %></p>
-		</div>
-	<% } %>
 </form>
 </div>
 
