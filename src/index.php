@@ -22,6 +22,9 @@ switch ($_GET['page']) {
     case 'profile':
             $smarty->display('./html/profile.tpl');
             break;
+    case 'profile_form' :
+        $smarty->display('./html/profile_form.tpl');
+        break;
     case 'script':
         $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
