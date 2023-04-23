@@ -34,7 +34,7 @@ function current_session() {
 }
 
 function getMeridiens(){
-  $request = "SELECT meridien.name as name
+  $request = "SELECT meridien.nom as name
               FROM meridien";
   $valren = requestSQL($request, $params, "acudb");
   return $valren;
