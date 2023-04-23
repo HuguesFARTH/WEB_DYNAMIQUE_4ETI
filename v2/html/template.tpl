@@ -11,6 +11,7 @@
       {include file="html/header.tpl"}
     </header>
     <div class="content">
+      {valid_session}
       {$content}
     </div>
     <footer>
