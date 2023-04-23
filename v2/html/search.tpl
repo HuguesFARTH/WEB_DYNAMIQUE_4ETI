@@ -2,7 +2,6 @@
 </link>
 <form class="filter_menu" id="form_menu" action="/search.php" method="post"> {* ou get ? avec du js ?*}
  <input id="keywords" class="" placeholder="Que recherchez-vous ?" value="">
-
  <div id="meridien_form" class="dropdown"> Meridiens <div class="dropdown-content">
     {foreach from=$meridiens item=$meridien}
       <li>

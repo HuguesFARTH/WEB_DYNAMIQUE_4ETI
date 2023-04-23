@@ -18,7 +18,6 @@ switch ($_GET['page']) {
     case 'register':
         $content = $smarty->fetch('./html/register.tpl');
         break;
-
     case 'logout':
         session_destroy();
         header('Location: /?page=home');
@@ -32,14 +31,14 @@ switch ($_GET['page']) {
             $smarty->assign('meridiens',$meridiens);
             $content = $smarty->fetch('./html/search.tpl');
         }else{
-            header('Location: /?page=home');
+            header('Location: /?page=login');
         }
         break;
     case 'profile':
         if($valid_session){
             $content = $smarty->fetch('./html/profile.tpl');
         }else{
-            header('Location: /?page=home');
+            header('Location: /?page=login');
         }
         break;
     case 'profile_form' :
