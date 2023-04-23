@@ -18,9 +18,8 @@ if (strlen($jsonData) > 0) {
 echo $data['keywords'];
 echo "\n";
      
-// convertie l'array $data['keywords'] en string pour la requete SQL
-//enlève tous les espaces et split la string en array
-$keywords = "('".preg_replace('/\s+/', '\',\'', trim($data['keywords']))."')";
+//split string
+$keywords = explode(",",preg_replace('/\s+/', '\',\'', trim($data['keywords'])));
 echo $keywords;
 
 $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
