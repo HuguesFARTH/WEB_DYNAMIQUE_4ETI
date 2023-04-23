@@ -37,7 +37,7 @@ $request = "SELECT patho.idp as pathoIdp, patho.type as pathoType, patho.desc as
 if (count($meridiens) == 1 && $meridiens[0] == ""){
     $request .= " WHERE true";
 }else{
-    $request .= "WHERE meridien.nom in (";
+    $request .= " WHERE meridien.nom in (";
     $request .= implode(',', array_fill(0, count($meridiens), '?'));
     $request .= ")";
     $sql_args = array_merge($sql_args,$meridiens);
