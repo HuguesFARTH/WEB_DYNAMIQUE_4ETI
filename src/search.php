@@ -1,6 +1,8 @@
 <?php
 
 require_once('./script.php');
+require_once('../libs/Smarty.class.php');
+$smarty = new Smarty();
 
 /* Reception du JSON */
 $jsonData = file_get_contents("php://input");
@@ -25,8 +27,21 @@ $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as p
                     INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
                     INNER JOIN keywords ON keysympt.idk = keywords.idk
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
-                    WHERE keywords.name in :keywords;";
-$sql_args = array(':keywords' => $keywords);
+                    WHERE keywords.name in (";
+$request .= implode(',', array_fill(0, count($keywords), '?'));
+$request .= ")";
+$sql_args = $keywords;
 $result = requestSQL($request, $sql_args);
-echo $result;
+// liste tous les résultats de la base de donnée
+foreach ($result as $key => $value) {
+    // echo "<br>";
+    // echo "Patho id:".$value['pathoidp']."<br>";
+    // echo " Name:".$value['name'] . "<br> " ."Patho Desc:". $value['pathodesc'] . "<br> " . "Sympt Desc:".$value['symptdesc'] . "<br> " ."Patho Type:". $value['pathotype']. "<br>";
+    
+    foreach ($value as $k => $v) {
+        echo $k.$v;
+        $smarty->assign($k,$v);
+    }
+    $smarty->display('./html/pathologie.tpl');
+}
 ?>
