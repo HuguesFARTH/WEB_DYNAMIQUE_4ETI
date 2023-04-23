@@ -29,7 +29,7 @@ $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as p
                     WHERE keywords.name in :keywords;";
 $sql_args = array('keywords' => $keywords);
 echo "<br>";
-var_dump($keywords);
+var_dump($sql_args);
 $result = requestSQL($request, $sql_args);
 echo $result;
 ?>
