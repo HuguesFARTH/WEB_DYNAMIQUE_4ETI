@@ -13,5 +13,4 @@ if(password_verify($_POST['password'],$result['password'])){
 } else {
     header('Location: /?page=login');
  };
-
 ?>
