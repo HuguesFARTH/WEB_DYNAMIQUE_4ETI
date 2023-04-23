@@ -27,7 +27,8 @@ $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as p
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
                     WHERE keywords.name in :keywords;";
 $sql_args = array('keywords' => $keywords);
-echo $sql_args."<br>";
+var_dump($keywords);
+echo "<br>";
 $result = requestSQL($request, $sql_args);
 echo $result;
 ?>
