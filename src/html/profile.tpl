@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='../css/login.less'>
   </head>
   <body>
-    <div id='container'>
+    <div class='container'>
     <h1>Mon profil</h1>
     <p>Nom : Jean</p>
     <p>Prénom : Dupont</p>
