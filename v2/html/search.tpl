@@ -2,33 +2,12 @@
 </link>
 <form class="filter_menu" id="form_menu" action="/search.php" method="post"> {* ou get ? avec du js ?*}
  <input id="keywords" class="" placeholder="Que recherchez-vous ?" value="">
+
  <div id="meridien_form" class="dropdown"> Meridiens <div class="dropdown-content">
   {foreach from=$meridiens item=$meridien}
   <input id="{$meridien.name}" type="checkbox" value="{$meridien.name}" name="{$meridien.name}">
   <Label for='{$meridien.name}'>{$meridien.name}</Label>
   {/foreach}
-</div>
- <div id="meridien_form" class="dropdown"> Catégorie de pathologie <div class="dropdown-content">
-  <li>
-    <input id="patho_mer" type="checkbox" value="m" name="patho_mer">
-    <Label for='patho_mer'>Pathologies de méridien</Label>
-  </li>
-  <li>
-    <input id="patho_vis" type="checkbox" value="tf" name="patho_vis">
-    <Label for='patho_vis'>Pathologies d’organe/viscère (tsang/fu)</Label>
-  </li>
-  <li>
-    <input id="patho_mus" type="checkbox" value="j" name="patho_mus" >
-    <Label for="patho_mus">Pathologies des tendino–musculaires (jing jin)</Label>
-  </li>
-  <li>
-    <input id="patho_bran" type="checkbox" value="l" name="patho_bran">
-    <Label id="patho_bran">Pathologie des branches (voies luo)</Label>
-  </li>
-  <li>
-    <input id="patho_vaiss" type="checkbox" value="patho_vaiss" name="patho_vaiss">
-    <Label for="patho_vaiss">Pathologies des merveilleux vaisseaux</Label>
-  </li>
 </div>
   <div id="category_form" class="dropdown"> Catégorie de pathologie <div class="dropdown-content">
       <li>
