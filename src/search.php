@@ -32,7 +32,7 @@ $sql_args = $keywords;
 $result = requestSQL($request, $sql_args);
 // liste tous les résultats de la base de donnée
 foreach ($result as $key => $value) {
-    echo "Patho id:".$value['pathoidp'];
+    echo "Patho id:".$value['pathoidp']."<br>";
     echo " Name:".$value['name'] . "<br> " ."Patho Desc:". $value['pathodesc'] . "<br> " . "Sympt Desc:".$value['symptdesc'] . "<br> " ."Patho Type:". $value['pathotype']. "<br>";
 }
 ?>
