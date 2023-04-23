@@ -2,7 +2,7 @@
 </link>
 <form class="filter_menu" id="form_menu" action="/search.php" method="post"> {* ou get ? avec du js ?*}
  <input id="keywords" class="" placeholder="Que recherchez-vous ?" value="">
-  <div class="dropdown"> Catégorie de pathologie <div class="dropdown-content">
+  <div id="category_form" class="dropdown"> Catégorie de pathologie <div class="dropdown-content">
       <li>
         <input id="patho_mer" type="checkbox" value="patho_mer" name="patho_mer">
         <Label for='patho_mer'>Pathologies de méridien</Label>
@@ -25,7 +25,7 @@
       </li>
     </div>
   </div>
-  <div class="dropdown"> Caractéristique.s <div class="dropdown-content">
+  <div id="caracteristique_form" class="dropdown"> Caractéristique.s <div class="dropdown-content">
       <li>
         <input id="car_int" type="checkbox" value="car_int" name="car_int">
         <Label for='car_int'>interne</Label>

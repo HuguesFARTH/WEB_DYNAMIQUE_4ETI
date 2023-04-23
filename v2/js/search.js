@@ -5,14 +5,23 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     console.log("search button clicked");
     e.preventDefault();
     //récupérer toutes les input d'un formulaire
-    var form = document.getElementById('form_menu');
-    var inputs = form.getElementsByTagName('input');
-    console.log(inputs);
     var formData = {};
+    var form = document.getElementById('category_form');
+    var inputs = form.getElementsByTagName('input');
+    formData['category'] = [];
     for (var i = 0; i < inputs.length; i++) {
-        formData[inputs[i].id] = inputs[i].checked;
+        if(inputs[i].checked){
+            formData['category'].append(inputs[i].value);
+        }
     }
-    console.log(form);
+    var form = document.getElementById('caracteristique_form');
+    var inputs = form.getElementsByTagName('input');
+    formData['caracteristique'] = [];
+    for (var i = 0; i < inputs.length; i++) {
+        if(inputs[i].checked){
+            formData['caracteristique'].append(inputs[i].value);
+        }
+    }
     console.log(formData);
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'search.php', true);
