@@ -1,4 +1,7 @@
 <?php
+
+require_once('./script.php');
+
 /* Reception du JSON */
 $jsonData = file_get_contents("php://input");
         
@@ -12,4 +15,15 @@ if (strlen($jsonData) > 0) {
 } else
     die('Aucune données JSON.');
 echo $data['keywords'];
+$request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
+                    FROM symptpatho
+                    INNER JOIN patho ON patho.idp = symptpatho.idp
+                    INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
+                    INNER JOIN keywords ON keysympt.idk = keywords.idk
+                    INNER JOIN symptome ON symptome.ids = symptpatho.ids
+                    WHERE keywords.name in :keywords;"
+                    
+$sql_args = array('keywords' => $data['keywords']);
+$result = requestSQL($request, $sql_args);
+echo $result;
 ?>
