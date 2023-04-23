@@ -32,7 +32,9 @@ switch ($_GET['page']) {
                     INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
                     INNER JOIN keywords ON keysympt.idk = keywords.idk
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
-                    WHERE keywords.name in ('voix','vomissement')";
+                    WHERE keywords.name in (";
+        $request .= implode(',', array_fill(0, count($mots_cles), '?'));
+        $request .= ")";
       
         $valren = requestSQL($request, null, "acudb");
         $txt = "<script>console.log('PHP: " . $valren . "');</script>";
