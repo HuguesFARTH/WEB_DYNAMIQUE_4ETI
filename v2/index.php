@@ -27,7 +27,7 @@ switch ($_GET['page']) {
         break;
     case 'search':
         if($valid_session){
-            $meridiens = getMeridiens()
+            $meridiens = getMeridiens();
             $smarty->assign('meridiens',$meridiens);
             $content = $smarty->fetch('./html/search.tpl');
         }else{
