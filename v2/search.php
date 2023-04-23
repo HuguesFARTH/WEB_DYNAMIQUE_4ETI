@@ -24,7 +24,7 @@ var_dump($data['meridiens']);
 var_dump($categories);
 $categories = $data['categories'];
 $caracteristiques = $data['caracteristiques'];
-$sql_args=[]
+$sql_args=[];
 //varifie si $keywords est vide
 $request = "SELECT patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, meridien.nom as mername, STRING_AGG(keywords.name,',') as tttt, STRING_AGG(keywords.name,',') as keywords, STRING_AGG(symptome.desc,',') as symptomes
                 FROM symptpatho
