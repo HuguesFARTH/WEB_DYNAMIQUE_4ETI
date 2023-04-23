@@ -1,6 +1,7 @@
 {* <link rel="stylesheet" href="css/index.less"></link> *}
 <link rel="stylesheet" href="css/search.less"></link>
-
+<link rel="stylesheet" href="css/search.less"></link>
+<script type="text/javascript" src="../js/search.js"></script>
 {* {include file="html/header.tpl"} *} {* on remettra plus tard *}
 <body>
 
@@ -62,7 +63,7 @@
                     
                 </div>
             </div>
-            <input type="submit" value="Submit" id="submit-button" hidden>
+            <input type="submit" value="Submit" id="search_button" hidden>
             <label for="submit-button" class="submit-button">Rechercher</label>
         </form>
         <div class="result">
