@@ -6,6 +6,9 @@ $smarty = new Smarty();
 session_start();
 
 $smarty->display("./html/header.tpl");
+if(!isset($_GET['page'])){
+    $_GET['page'] = "home";
+}
 switch ($_GET['page']) {
     case 'login':
         $smarty->display('./html/login.tpl');
