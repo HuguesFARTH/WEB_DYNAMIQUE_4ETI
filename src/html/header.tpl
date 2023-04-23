@@ -8,7 +8,7 @@
     <li><a href="/?page=profile">Profile</a></li>
     <li><a href="">About</a></li>
     {if session_status() != 'PHP_SESSION_ACTIVE'} 
-      <li>Non Connecté</li>
+      <li>{$smarty.session.user[0]['email']}</li>
     {else}
       <li>{$smarty.session.user[0]['email']}</li>
     {/if}
