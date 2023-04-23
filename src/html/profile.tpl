@@ -1,38 +1,36 @@
-
+<head>
+    <link rel="stylesheet" href="../css/profile.less">
+</head>
 {include file="html/header.tpl"}
 
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href='../css/login.less'>
-  </head>
-  <body>
-    <div class='container'>
-    <h1 class='text'>Mon profil</h1>
-    <p class='text'>Nom : Jean</p>
-    <p class='text'>Prénom : Dupont</p>
-    <p class='text'>Email : jean.dupont@gmail.com</p>
-    <p class='text'>
-      Mot de passe :
-      <button onclick="togglePassword()">Afficher le mot de passe</button>
-    </p>
-    <script>
-      function togglePassword() {
-        var password = document.getElementById("password");
-        if (password.type === "password") {
-          password.type = "text";
-        } else {
-          password.type = "password";
-        }
-      }
-    </script>
-    <input type="password" id="password" value="monmotdepasse" style="display:none">
-    </div>
-  </body>
-</html>
+<h2 class>Mon profil</h2>
+<div class="container">
+	<div class="grid">
+		<div class="form-group a">
+			<label for="name">Nom</label>
+            <h3> NOM</h3>
+		</div>
 
+		<div class="form-group b">
+			<label for="first-name">Prénom</label>
+            <h3> PRENOM</h3>
+		</div>
+
+		<div class="form-group email-group">
+			<label for="email">Email (CPE)</label>
+            <h3>EMAIL</h3>
+		</div>
+
+        <div class="form-group">
+			<label for="password">Password</label>
+            <h3> ********** </h3>
+		</div>
+        <form action="/profile_change" method="post">
+            <div class="button-container">
+                <button type="submit" class="button" >Modifier les infos</button>
+            </div>
+        </form>
+	</div>
+</div>
 
 {include file="html/footer.tpl"}
