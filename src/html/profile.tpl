@@ -8,17 +8,17 @@
 	<div class="grid">
 		<div class="form-group a">
 			<label for="name">Nom</label>
-            <h3> NOM</h3>
+            <h3> {$smarty.session.user[0]['last_name']}</h3>
 		</div>
 
 		<div class="form-group b">
 			<label for="first-name">Prénom</label>
-            <h3> PRENOM</h3>
+            <h3> {$smarty.session.user[0]['name']}</h3>
 		</div>
 
 		<div class="form-group email-group">
 			<label for="email">Email (CPE)</label>
-            <h3>EMAIL</h3>
+            <h3>{$smarty.session.user[0]['email']}</h3>
 		</div>
 
         <div class="form-group">
