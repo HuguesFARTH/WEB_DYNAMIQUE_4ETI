@@ -20,10 +20,8 @@ if (strlen($jsonData) > 0) {
 //split string
 $keywords = explode(",",preg_replace('/\s+/', ',', trim($data['keywords'])));
 //varifie si $keywords est vide
-var_dump($keywords);
 if (count($keywords) == 1 && $keywords[0] == ""){
-    echo "vide";
-    $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
+    $request = "SELECT patho.mer, keywords.name as keywordsName, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
                     INNER JOIN patho ON patho.idp = symptpatho.idp
                     INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
@@ -31,8 +29,7 @@ if (count($keywords) == 1 && $keywords[0] == ""){
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids";
     $sql_args = null;
 }else{
-    echo "notvide";
-    $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
+    $request = "SELECT patho.mer, keywords.name as keywordsName, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
                     INNER JOIN patho ON patho.idp = symptpatho.idp
                     INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
