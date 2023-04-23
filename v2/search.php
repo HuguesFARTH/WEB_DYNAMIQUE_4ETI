@@ -41,7 +41,7 @@ if (count($keywords) == 1 && $keywords[0] == ""){
 }
 $result = requestSQL($request, $sql_args);
 echo "Data received:"
-var_dump(data);
+var_dump($data);
 echo "<br>"
 foreach ($result as $key => $value) {
     // echo "<br>";
