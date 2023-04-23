@@ -18,6 +18,7 @@ if (strlen($jsonData) > 0) {
 
 //split string
 $keywords = explode(",",strtolower(preg_replace('/\s+/', ',', trim($data['keywords']))));
+$categories = $data['categories']
 //varifie si $keywords est vide
 if (count($keywords) == 1 && $keywords[0] == ""){
     $request = "SELECT patho.mer, keywords.name as keywordsName, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc

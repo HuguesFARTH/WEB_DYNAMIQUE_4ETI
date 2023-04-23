@@ -9,18 +9,18 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     formData['keywords'] = document.getElementById('keywords').value;
     var form = document.getElementById('category_form');
     var inputs = form.getElementsByTagName('input');
-    formData['category'] = [];
+    formData['categories'] = [];
     for (var i = 0; i < inputs.length; i++) {
         if(inputs[i].checked){
-            formData['category'].push(inputs[i].value);
+            formData['categories'].push(inputs[i].value);
         }
     }
     var form = document.getElementById('caracteristique_form');
     var inputs = form.getElementsByTagName('input');
-    formData['caracteristique'] = [];
+    formData['caracteristiques'] = [];
     for (var i = 0; i < inputs.length; i++) {
         if(inputs[i].checked){
-            formData['caracteristique'].push(inputs[i].value);
+            formData['caracteristiques'].push(inputs[i].value);
         }
     }
     console.log(formData);
