@@ -19,7 +19,6 @@ if (strlen($jsonData) > 0) {
      
 //split string
 $keywords = explode(",",preg_replace('/\s+/', ',', trim($data['keywords'])));
-var_dump($keywords);
 
 $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
@@ -32,14 +31,11 @@ $request .= implode(',', array_fill(0, count($keywords), '?'));
 $request .= ")";
 $sql_args = $keywords;
 $result = requestSQL($request, $sql_args);
-// liste tous les résultats de la base de donnée
 foreach ($result as $key => $value) {
     // echo "<br>";
     // echo "Patho id:".$value['pathoidp']."<br>";
     // echo " Name:".$value['name'] . "<br> " ."Patho Desc:". $value['pathodesc'] . "<br> " . "Sympt Desc:".$value['symptdesc'] . "<br> " ."Patho Type:". $value['pathotype']. "<br>";
-    
     foreach ($value as $k => $v) {
-        echo $k.$v;
         $smarty->assign($k,$v);
     }
     $smarty->display('./html/pathologie.tpl');
