@@ -1,6 +1,7 @@
 
 console.log('search.js loaded');
 function submit_search_form(){
+    console.log("search form send");
     //récupérer toutes les input d'un formulaire
     var formData = {};
     formData['keywords'] = document.getElementById('keywords').value;
@@ -41,7 +42,6 @@ function submit_search_form(){
     }
 }
 document.getElementById('search_button').addEventListener('click', function (e) {
-    console.log("search button clicked");
     e.preventDefault();
     submit_search_form();
 });
