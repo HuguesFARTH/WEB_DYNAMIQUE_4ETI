@@ -1,6 +1,8 @@
 <?php
-//renvoie les données du formulaire de recherche
-if (isset($_POST)) {
-    print_r($_POST);
-}
+ 
+header("Content-Type: application/json");
+ 
+$data = json_decode(file_get_contents("php://input"));
+ 
+echo "Hello $data";
 ?>
