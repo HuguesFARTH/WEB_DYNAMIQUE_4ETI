@@ -6,6 +6,8 @@ require_once('./script.php');
 $smarty = new Smarty();
 session_start();
 
+
+$smarty->display("html/header.tpl");
 switch ($_GET['page']) {
     case 'login':
         $smarty->display('./html/login.tpl');
@@ -47,4 +49,5 @@ switch ($_GET['page']) {
         break;
 }
 
+$smarty->display("html/footer.tpl");
 ?>

@@ -9,6 +9,10 @@
     <li><a href="/?page=search">Search</a></li>
     <li><a href="/?page=profile">Profile</a></li>
     <li><a href="">About</a></li>
-    <li>{$smarty.session.user[0]['email']}</li>
+    {if session_status() != 'PHP_SESSION_ACTIVE'} 
+      <li>{$smarty.session.user[0]['email']}</li>
+    {else}
+      <li>{$smarty.session.user[0]['email']}</li>
+    {/if}
   </ul>
 </div>
