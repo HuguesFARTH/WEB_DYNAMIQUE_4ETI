@@ -29,14 +29,14 @@ switch ($_GET['page']) {
         if($valid_session){
             $content = $smarty->fetch('./html/search.html');
         }else{
-            $content = $smarty->fetch('./html/home.tpl');
+            header('Location: /?page=home');
         }
         break;
     case 'profile':
         if($valid_session){
             $content = $smarty->fetch('./html/profile.tpl');
         }else{
-            $content = $smarty->fetch('./html/home.tpl');
+            header('Location: /?page=home');
         }
         break;
     case 'profile_form' :
