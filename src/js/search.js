@@ -1,4 +1,6 @@
-//récupère le boutton d'id search_button, ne redirige pas vers une autre page et envoye une requête à search.php
+
+console.log('search.js loaded');
+
 document.getElementById('search_button').addEventListener('click', function (e) {
     e.preventDefault();
     var search = document.getElementById('search').value;
