@@ -3,7 +3,7 @@
 <ul>
   <li><a href="/?page=home">Home</a></li>
   <li><a href="/?page=search">Search</a></li>
-  {if !$valid_session} 
+  {if isset($smarty.valid_session)} 
     <li><a href="/?page=login">Se connecter</a></li>
   {else}
     <li><a href="/?page=profile">Profile</a></li>
