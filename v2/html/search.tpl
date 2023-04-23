@@ -4,11 +4,12 @@
  <input id="keywords" class="" placeholder="Que recherchez-vous ?" value="">
 
  <div id="meridien_form" class="dropdown"> Meridiens <div class="dropdown-content">
-  {foreach from=$meridiens item=$meridien}
-  <input id="{$meridien.name}" type="checkbox" value="{$meridien.name}" name="{$meridien.name}">
-  <Label for='{$meridien.name}'>{$meridien.name}</Label>
-  {/foreach}
-</div>
+    {foreach from=$meridiens item=$meridien}
+    <input id="{$meridien.name}" type="checkbox" value="{$meridien.name}" name="{$meridien.name}">
+    <Label for='{$meridien.name}'>{$meridien.name}</Label>
+    {/foreach}
+    </div>
+  </div>
   <div id="category_form" class="dropdown"> Catégorie de pathologie <div class="dropdown-content">
       <li>
         <input id="patho_mer" type="checkbox" value="m" name="patho_mer">
