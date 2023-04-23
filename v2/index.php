@@ -6,7 +6,7 @@ require_once('./login_utils.php');
 $smarty = new Smarty();
 session_start();
 $valid_session = is_valid_session();
-// $smarty->assign('valid_session',$valid_session);
+$smarty->assign('valid_session',$valid_session);
 if(!isset($_GET['page'])){
     $_GET['page'] = "home";
 }
