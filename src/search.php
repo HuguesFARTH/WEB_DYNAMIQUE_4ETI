@@ -17,7 +17,7 @@ if (strlen($jsonData) > 0) {
      
 //split string
 $keywords = explode(",",preg_replace('/\s+/', '\',\'', trim($data['keywords'])));
-echo implode(" ",$keywords);
+var_dump(implode(" ",$keywords));
 
 $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
