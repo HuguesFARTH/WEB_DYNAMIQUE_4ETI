@@ -33,6 +33,8 @@ $sql_args = $keywords;
 echo "<br>";
 var_dump($sql_args);
 $result = requestSQL($request, $sql_args);
-
-var_dump($result);
+// liste tous les résultats de la base de donnée
+foreach ($result as $key => $value) {
+    echo $value['name'] . " " . $value['pathodesc'] . " " . $value['symptdesc'] . " " . $value['pathotype'] . " " . $value['pathoidp'] . "<br>";
+}
 ?>
