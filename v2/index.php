@@ -15,7 +15,7 @@ switch ($_GET['page']) {
         $smarty->display('./html/register.tpl');
         break;
     case 'home':
-        $smarty->display('./html/home.tpl');
+        $content = $smarty->fetch('./html/home.tpl');
         break;
     case 'search':
         $smarty->display('./html/search.html');
@@ -44,7 +44,9 @@ switch ($_GET['page']) {
         $smarty->display('./html/pathologie.tpl');
         break;
     default:
-        $smarty->display('./html/home.tpl');
+        $content = $smarty->fetch('./html/home.tpl');
         break;
 }
+$smarty->assign('content',$content);
+$smarty->display('./html/template.tpl');
 ?>
