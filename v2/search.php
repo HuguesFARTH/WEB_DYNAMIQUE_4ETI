@@ -36,7 +36,7 @@ $request = "SELECT patho.idp as pathoIdp, patho.type as pathoType, patho.desc as
                 WHERE meridien.nom in ('Poumon','Foie','Vésicule Biliaire')";
 //MERIDIEN
 if (count($meridiens) == 1 && $meridiens[0] == ""){
-    $request .= "WHERE true";
+    $request .= " WHERE true";
 }else{
     $request .= "WHERE meridien.nom in (";
     $request .= implode(',', array_fill(0, count($meridiens), '?'));
@@ -47,7 +47,7 @@ if (count($meridiens) == 1 && $meridiens[0] == ""){
 //KEYWORDS
 if (count($keywords) == 1 && $keywords[0] == ""){
 }else{
-    $request .= "and keywords.name in (";
+    $request .= " and keywords.name in (";
     $request .= implode(',', array_fill(0, count($keywords), '?'));
     $request .= ")";
     $sql_args = array_merge($sql_args,$keywords);
