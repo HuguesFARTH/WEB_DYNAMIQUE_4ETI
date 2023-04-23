@@ -4,8 +4,6 @@ require_once('../libs/Smarty.class.php');
 
 $smarty = new Smarty();
 session_start();
-
-$smarty->display("./html/header.tpl");
 if(!isset($_GET['page'])){
     $_GET['page'] = "home";
 }
@@ -49,6 +47,4 @@ switch ($_GET['page']) {
         $smarty->display('./html/home.tpl');
         break;
 }
-
-$smarty->display("./html/footer.tpl");
 ?>
