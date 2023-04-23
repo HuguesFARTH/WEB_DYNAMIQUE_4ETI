@@ -21,7 +21,7 @@ if (strlen($jsonData) > 0) {
 $keywords = explode(",",preg_replace('/\s+/', ',', trim($data['keywords'])));
 //varifie si $keywords est vide
 var_dump($keywords);
-if (trim($data['keywords']).lenght == 0){
+if (trim($data['keywords']).length == 0){
     echo "vide";
     $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
                     FROM symptpatho
