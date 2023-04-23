@@ -18,7 +18,7 @@ switch ($_GET['page']) {
         $content = $smarty->fetch('./html/home.tpl');
         break;
     case 'search':
-        $content = $smarty->fetch('./html/search.html');
+        $content = $smarty->fetch('./html/search.tpl');
         break;
     case 'profile':
         $content = $smarty->fetch('./html/profile.tpl');
