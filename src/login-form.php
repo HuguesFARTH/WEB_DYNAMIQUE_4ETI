@@ -5,7 +5,7 @@ $sql_get_user = "SELECT * FROM users WHERE email = :email";
 $sql_args = array('email' => $_POST['email']);
 $result = requestSQL($sql_get_user, $sql_args);
 
-if(password_verify($result['password'],$_POST['password'])){
+if(password_verify($_POST['password'],$result['password'])){
     echo 'connected';
     session_start();
     $_SESSION['user'] = $result;
