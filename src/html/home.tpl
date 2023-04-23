@@ -1,5 +1,4 @@
 
-{include file="html/header.tpl"}
 
 <body>
     <div class="container">
