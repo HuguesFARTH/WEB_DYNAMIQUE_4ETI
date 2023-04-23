@@ -50,6 +50,6 @@ foreach ($result as $key => $value) {
     foreach ($value as $k => $v) {
         $smarty->assign($k,$v);
     }
-    $smarty->display('./html/pathologie.tpl');
+    $smarty->fetch('./html/pathologie.tpl');
 }
 ?>
