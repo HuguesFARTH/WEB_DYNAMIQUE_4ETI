@@ -6,7 +6,7 @@ document.getElementById('search_button').addEventListener('click', function (e) 
     e.preventDefault();
     //récupérer toutes les input d'un formulaire
     var formData = {};
-    formData['keywords'].push(document.getElementById('keywords').value);
+    formData['keywords'] = document.getElementById('keywords').value;
     var form = document.getElementById('category_form');
     var inputs = form.getElementsByTagName('input');
     formData['category'] = [];
