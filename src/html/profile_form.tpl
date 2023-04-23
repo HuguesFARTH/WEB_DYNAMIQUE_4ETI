@@ -1,7 +1,6 @@
 <head>
 <link rel="stylesheet" href="../css/profile.less">
 </head>
-{include file="html/header.tpl"}
 
 
 <h2>Modifier mon profil</h2>
@@ -35,4 +34,3 @@
 </form>
 </div>
 
-{include file="html/footer.tpl"}
