@@ -27,7 +27,7 @@ function requestSQl($request, $params=null, $dbname="acudb") {
 
 function current_session() {
   if (session_status() != 'PHP_SESSION_ACTIVE'){
-    return True;r
+    return True;
   } else {
     return False;
   }
