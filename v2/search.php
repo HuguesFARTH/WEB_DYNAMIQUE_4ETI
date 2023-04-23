@@ -30,7 +30,7 @@ $request = "SELECT patho.idp as pathoIdp, patho.type as pathoType, patho.desc as
                 INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
                 INNER JOIN keywords ON keysympt.idk = keywords.idk
                 INNER JOIN symptome ON symptome.ids = symptpatho.ids
-                WHERE (meridien.nom in ('Poumon','Foie','Vésicule Biliaire'))";
+                WHERE meridien.nom in ('Poumon','Foie','Vésicule Biliaire')";
 //MERIDIEN
 if (count($meridiens) == 1 && $meridiens[0] == ""){
     $request .= "WHERE true";
