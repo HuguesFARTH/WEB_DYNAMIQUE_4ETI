@@ -16,7 +16,7 @@ if (strlen($jsonData) > 0) {
         die('Données JSON invalides.');
 } else
     die('Aucune données JSON.');
-     
+
 //split string
 $keywords = explode(",",strtolower(preg_replace('/\s+/', ',', trim($data['keywords']))));
 //varifie si $keywords est vide
