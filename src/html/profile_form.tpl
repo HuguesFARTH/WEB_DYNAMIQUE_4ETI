@@ -10,12 +10,12 @@
 	<div class="grid">
 		<div class="form-group">
 			<label for="name">Nom</label>
-			<input id="name" type="text" name="nom" required>
+			<input id="name" type="text" name="last_name" required>
 		</div>
 
 		<div class="form-group">
 			<label for="first-name">Prénom</label>
-			<input id="first-name" type="text" name="prenom" required>
+			<input id="first-name" type="text" name="name" required>
 		</div>
 
 		<div class="form-group email-group">
