@@ -2,7 +2,7 @@
 {include file="html/header.tpl"}
 
 <body>
-    <div class="container">
+    <div class="container_home">
         <h3>Bienvenue sur le site d'Assopuncture</h3>
         <span>L'Association d’acupuncteurs en médecine traditionnelle chinoise</span>
 
