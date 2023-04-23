@@ -17,6 +17,11 @@ switch ($_GET['page']) {
     case 'register':
         $content = $smarty->fetch('./html/register.tpl');
         break;
+
+    case 'logout':
+        session_destroy();
+        header('Location: /?page=home');
+        break;
     case 'home':
         $content = $smarty->fetch('./html/home.tpl');
         break;

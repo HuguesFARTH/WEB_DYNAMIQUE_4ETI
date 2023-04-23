@@ -7,7 +7,7 @@
     <li><a href="/?page=login">Se connecter</a></li>
   {else}
     <li><a href="/?page=profile">Profile</a></li>
-    <li><a href="/logout.php">
+    <li><a href="/?page=logout">
       <img class="invert_image" src="images/logout.png" alt="logout" width="20" height="20"/>
       </a></li>
   {/if}
