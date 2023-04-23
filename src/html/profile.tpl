@@ -1,7 +1,6 @@
 <head>
     <link rel="stylesheet" href="../css/profile.less">
 </head>
-{include file="html/header.tpl"}
 
 <h2 class>Mon profil</h2>
 <div class="container-profile">
@@ -38,4 +37,3 @@
 	</div>
 </div>
 
-{include file="html/footer.tpl"}
