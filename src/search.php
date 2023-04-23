@@ -1,1 +1,3 @@
-echo "OK"
+<?php
+    echo $_POST
+?>
