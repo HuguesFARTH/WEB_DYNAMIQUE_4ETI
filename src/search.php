@@ -17,6 +17,7 @@ if (strlen($jsonData) > 0) {
      
 //split string
 $keywords = explode(",",preg_replace('/\s+/', ',', trim($data['keywords'])));
+echo "<br>";
 var_dump($keywords);
 
 $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
@@ -27,8 +28,8 @@ $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as p
                     INNER JOIN symptome ON symptome.ids = symptpatho.ids
                     WHERE keywords.name in :keywords;";
 $sql_args = array('keywords' => $keywords);
-var_dump($keywords);
 echo "<br>";
+var_dump($keywords);
 $result = requestSQL($request, $sql_args);
 echo $result;
 ?>
