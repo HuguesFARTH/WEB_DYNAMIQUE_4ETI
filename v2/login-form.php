@@ -11,8 +11,8 @@ if(password_verify($hashSecure,$result['password'])){
     echo 'connected';
     session_start();
     $_SESSION['user'] = $result;
-    header('Location: /?page=home');
+    // header('Location: /?page=home');
 } else {
-    header('Location: /?page=login');
+    // header('Location: /?page=login');
  };
 ?>
