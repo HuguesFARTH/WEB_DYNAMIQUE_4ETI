@@ -9,7 +9,7 @@ define('PREFIX_SALT', 'asso');
 define('SUFFIX_SALT', 'puncture');
 $hashSecure = md5(PREFIX_SALT.$_POST['password'].SUFFIX_SALT);
 
-if($result[0]['password'] == $hashSecure){
+if($result[0]['password'] === $hashSecure){
     echo 'connected';
     session_start();
     $_SESSION['user'] = $result;
