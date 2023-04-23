@@ -52,7 +52,7 @@ if (count($keywords) == 1 && $keywords[0] == ""){
     $sql_args = array_merge($sql_args,$keywords);
 }
     
-$request.="GROUP BY patho.idp, meridien.nom 
+$request.=" GROUP BY patho.idp, meridien.nom 
                 ORDER BY patho.idp;";
 var_dump($request);
 $result = requestSQL($request, $sql_args);
