@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../css/profile.less">
+<link rel="stylesheet" href="css/profile.less">
 <h2 class='text'>Mon profil</h2>
 <div class="container-profile">
 	<div class="grid">
