@@ -40,9 +40,8 @@ foreach ($result as $key => $value) {
     
     foreach ($value as $k => $v) {
         echo $k.$v;
-        // $smarty->assign('name',$value['name']);
+        $smarty->assign($k,$v);
     }
-    
 }
 $smarty->display('./html/pathologie.tpl');
 ?>

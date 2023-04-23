@@ -69,7 +69,7 @@
                 <div class="result_page_title">
                     <h2>Resultat de la recherche</h2>
                 </div>
-                <div class="result_page_content">
+                <div id="result_page_content" class="result_page_content">
                     <div class="result_page_content_item">
                         <div class="result_page_content_item_title">
                             <h3>Titre de la pathologie</h3>
