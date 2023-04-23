@@ -17,7 +17,6 @@ if (strlen($jsonData) > 0) {
      
 //split string
 $keywords = explode(",",preg_replace('/\s+/', ',', trim($data['keywords'])));
-echo "<br>";
 var_dump($keywords);
 
 $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
@@ -30,11 +29,9 @@ $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as p
 $request .= implode(',', array_fill(0, count($keywords), '?'));
 $request .= ")";
 $sql_args = $keywords;
-echo "<br>";
-var_dump($sql_args);
 $result = requestSQL($request, $sql_args);
 // liste tous les résultats de la base de donnée
 foreach ($result as $key => $value) {
-    echo $value['name'] . " " . $value['pathodesc'] . " " . $value['symptdesc'] . " " . $value['pathotype'] . " " . $value['pathoidp'] . "<br>";
+    echo "Name:".$value['name'] . " " ."Patho Desc:". $value['pathodesc'] . " " . "Sympt Desc:".$value['symptdesc'] . " " ."Patho Type:". $value['pathotype'] . " " ."Patho id:".$value['pathoidp'] . "<br>";
 }
 ?>
