@@ -23,7 +23,7 @@ $categories = $data['categories'];
 $caracteristiques = $data['caracteristiques'];
 $sql_args=[];
 //varifie si $keywords est vide
-$request = "SELECT patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, meridien.nom as mername, STRING_AGG(keywords.name,',') WITHIN GROUP (ORDER BY keywords.name) as keywords, STRING_AGG(symptome.desc,',') as symptomes
+$request = "SELECT patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, meridien.nom as mername, STRING_AGG(keywords.name,',') as keywords, STRING_AGG(symptome.desc,',') as symptomes
                 FROM symptpatho
                 INNER JOIN patho ON patho.idp = symptpatho.idp
                 INNER JOIN meridien ON meridien.code = patho.mer
