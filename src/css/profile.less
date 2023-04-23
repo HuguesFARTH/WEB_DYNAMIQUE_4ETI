@@ -1,9 +1,15 @@
 
 .container {
-	background: #fff;
-	width: 100%;
-	max-width: 80%;
-	margin-left: 20px;
+    position: relative;
+    margin-top: 82px;
+    margin-bottom: 98px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 0;
+    color: #181929;
+    border-radius: 10px;
 }
 
 .form-group {
@@ -111,56 +117,3 @@
 	font-size: 20px;
 }
 
-@media screen and (min-width: 768px) {
-	body {
-		align-items: center;
-		justify-content: center;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.container {
-		width: 100%;
-	}
-
-	.checkboxes {
-		display: flex;
-	}
-	.checkboxes > :not(:first-child) {
-		margin-left: 1rem;
-	}
-
-	.grid {
-		display: grid;
-		grid-gap: 24px;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-auto-rows: 1fr;
-	}
-
-	.email-group {
-		grid-column: 1;
-		grid-row: 2;
-	}
-
-	.phone-group {
-		grid-column: 2;
-		grid-row: 2;
-	}
-
-	.textarea-group {
-		grid-column: 3;
-		grid-row: span 2;
-		margin-right: 2rem;
-	}
-
-	.button-container {
-		text-align: right;
-	}
-
-	.button {
-		/* bon, bon, bon
-		c'est pas tout mais j'ai faim moi ^^
-		*/
-		width: auto;
-	}
-}
