@@ -19,6 +19,9 @@ if (strlen($jsonData) > 0) {
 //split string
 $keywords = explode(",",strtolower(preg_replace('/\s+/', ',', trim($data['keywords']))));
 $meridiens = $data['meridiens'];
+var_dump($keywords)
+var_dump($meridiens)
+var_dump($categories)
 $categories = $data['categories'];
 $caracteristiques = $data['caracteristiques'];
 $sql_args=[]
