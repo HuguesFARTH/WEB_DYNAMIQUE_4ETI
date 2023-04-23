@@ -9,7 +9,7 @@
     <li><a href="">About</a></li>
     {if ! isset($smarty.session.user) && isset($smarty.session.user[0]['email'])} 
       <li>Non Connecté</li>
-    {else}
+    {else} 
       <li>{$smarty.session.user[0]['email']}</li>
     {/if}
   </ul>
