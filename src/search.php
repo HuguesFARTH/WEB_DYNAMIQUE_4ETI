@@ -6,7 +6,6 @@ $smarty = new Smarty();
 
 /* Reception du JSON */
 $jsonData = file_get_contents("php://input");
-
 /* Verifie si JSON est vide */
 if (strlen($jsonData) > 0) {
     /* Decoder JSON */
@@ -16,32 +15,49 @@ if (strlen($jsonData) > 0) {
         die('Données JSON invalides.');
 } else
     die('Aucune données JSON.');
-     
+
 //split string
 $keywords = explode(",",strtolower(preg_replace('/\s+/', ',', trim($data['keywords']))));
+$meridiens = $data['meridiens'];
+$categories = $data['categories'];
+$caracteristiques = $data['caracteristiques'];
+$sql_args=[];
 //varifie si $keywords est vide
-if (count($keywords) == 1 && $keywords[0] == ""){
-    $request = "SELECT patho.mer, keywords.name as keywordsName, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
-                    FROM symptpatho
-                    INNER JOIN patho ON patho.idp = symptpatho.idp
-                    INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
-                    INNER JOIN keywords ON keysympt.idk = keywords.idk
-                    INNER JOIN symptome ON symptome.ids = symptpatho.ids";
-    $sql_args = null;
+$request = "SELECT patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, meridien.nom as mername, STRING_AGG(keywords.name,',') as keywords, STRING_AGG(symptome.desc,',') as symptomes
+                FROM symptpatho
+                INNER JOIN patho ON patho.idp = symptpatho.idp
+                INNER JOIN meridien ON meridien.code = patho.mer
+                INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
+                INNER JOIN keywords ON keysympt.idk = keywords.idk
+                INNER JOIN symptome ON symptome.ids = symptpatho.ids";
+//MERIDIEN
+if (count($meridiens) == 0){
+    $request .= " WHERE true";
 }else{
-    $request = "SELECT patho.mer, keywords.name as keywordsName, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
-                    FROM symptpatho
-                    INNER JOIN patho ON patho.idp = symptpatho.idp
-                    INNER JOIN keysympt ON keysympt.ids = symptpatho.ids
-                    INNER JOIN keywords ON keysympt.idk = keywords.idk
-                    INNER JOIN symptome ON symptome.ids = symptpatho.ids
-                    WHERE keywords.name in (";
+    $request .= " WHERE meridien.nom in (";
+    $request .= implode(',', array_fill(0, count($meridiens), '?'));
+    $request .= ")";
+    $sql_args = array_merge($sql_args,$meridiens);
+}
+
+//KEYWORDS
+if (count($keywords) == 1 && $keywords[0] == ""){
+}else{
+    $request .= " and keywords.name in (";
     $request .= implode(',', array_fill(0, count($keywords), '?'));
     $request .= ")";
-    $sql_args = $keywords;
+    $sql_args = array_merge($sql_args,$keywords);
 }
+    
+$request.=" GROUP BY patho.idp, meridien.nom 
+                ORDER BY patho.idp;";
 $result = requestSQL($request, $sql_args);
-
+// echo "<br>";
+// var_dump($request);
+// echo "<br>";
+// echo "Data received:";
+// var_dump($result);
+// echo "<br>";
 foreach ($result as $key => $value) {
     // echo "<br>";
     // echo "Patho id:".$value['pathoidp']."<br>";

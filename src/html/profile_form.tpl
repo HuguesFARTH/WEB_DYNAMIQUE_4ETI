@@ -1,8 +1,4 @@
-<head>
-<link rel="stylesheet" href="../css/profile.less">
-</head>
-
-
+<link rel="stylesheet" href="css/profile.less">
 <h2>Modifier mon profil</h2>
 <div class="container-profile">
     <form action="/profile_form.php" method="post">

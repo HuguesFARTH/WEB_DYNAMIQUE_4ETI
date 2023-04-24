@@ -31,9 +31,12 @@ function current_session() {
   } else {
     return False;
   }
-
 }
 
-
-
+function getMeridiens(){
+  $request = "SELECT meridien.nom as name
+              FROM meridien";
+  $valren = requestSQL($request);
+  return $valren;
+}
 ?>

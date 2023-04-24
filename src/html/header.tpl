@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="css/index.less"></link>
 <link rel="stylesheet" href="css/header.less"></link>
-<div id="header">
-  <ul>
-    <li><a href="/?page=home">Home</a></li>
-    <li><a href="/?page=search">Search</a></li>
+
+<ul>
+  <li><a href="/?page=home">Home</a></li>
+  <li><a href="/?page=search">Search</a></li>
+  {if $valid_session == false} 
+    <li><a href="/?page=login">Se connecter</a></li>
+  {else}
     <li><a href="/?page=profile">Profile</a></li>
-    <li><a href="">About</a></li>
-    {if ! isset($smarty.session.user) && isset($smarty.session.user[0]['email'])} 
-      <li>Non Connecté</li>
-    {else} 
-      <li>{$smarty.session.user[0]['email']}</li>
-    {/if}
-  </ul>
-</div>
+    <li><a href="/?page=logout">
+      <img class="invert_image" src="images/logout.png" alt="logout" width="20" height="20"/>
+      </a></li>
+  {/if}
+</ul>

@@ -1,31 +1,52 @@
 <?php
 // Note : Smarty a un 'S' majuscule
 require_once('../libs/Smarty.class.php');
+require_once('./login_utils.php');
 require_once('./script.php');
 
 $smarty = new Smarty();
 session_start();
-
-
-$smarty->display("html/header.tpl");
+$valid_session = is_valid_session();
+$smarty->assign('valid_session',$valid_session);
+if(!isset($_GET['page'])){
+    $_GET['page'] = "home";
+}
 switch ($_GET['page']) {
     case 'login':
-        $smarty->display('./html/login.tpl');
+        $content = $smarty->fetch('./html/login.tpl');
         break;
     case 'register':
-        $smarty->display('./html/register.tpl');
+        $content = $smarty->fetch('./html/register.tpl');
+        break;
+    case 'logout':
+        session_destroy();
+        header('Location: /?page=home');
         break;
     case 'home':
-        $smarty->display('./html/home.tpl');
+        $content = $smarty->fetch('./html/home.tpl');
         break;
     case 'search':
-        $smarty->display('./html/search.html');
+        if($valid_session){
+            $meridiens = getMeridiens();
+            $smarty->assign('meridiens',$meridiens);
+            $content = $smarty->fetch('./html/search.tpl');
+        }else{
+            header('Location: /?page=login');
+        }
         break;
     case 'profile':
-            $smarty->display('./html/profile.tpl');
-            break;
+        if($valid_session){
+            $content = $smarty->fetch('./html/profile.tpl');
+        }else{
+            header('Location: /?page=login');
+        }
+        break;
     case 'profile_form' :
-        $smarty->display('./html/profile_form.tpl');
+        if($valid_session){
+            $content = $smarty->fetch('./html/profile_form.tpl');
+        }else{
+            header('Location: /?page=login');
+        }
         break;
     case 'script':
         $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
@@ -45,9 +66,9 @@ switch ($_GET['page']) {
         $smarty->display('./html/pathologie.tpl');
         break;
     default:
-        $smarty->display('./html/home.tpl'); // a changer plus tard
+        $content = $smarty->fetch('./html/home.tpl');
         break;
 }
-
-$smarty->display("html/footer.tpl");
+$smarty->assign('content',$content);
+$smarty->display('./html/template.tpl');
 ?>
