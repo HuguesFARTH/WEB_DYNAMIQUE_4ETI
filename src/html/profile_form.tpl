@@ -20,10 +20,17 @@
 
         <div class="form-group">
 			<label for="password">Password</label>
-			<input id="password" type="password" name="password" placeholder="votre mot de passe actuel" required>
+			<input id="password" type="password" name="password" placeholder="Votre mot de passe actuel" required>
+		</div>
+		<div class="form-group">
+			<label for="current_password">Password</label>
+			<input id="current_password" type="password" name="current_password" placeholder="Votre mot de passe actuel" required>
+		</div>
+		<div class="form-group">
+			<label for="password">New password</label>
+			<input id="password" type="password" name="password" placeholder="Nouveau mot de passe" required>
 		</div>
 	</div>
-
 	<div class="button-container">
 		<button type="submit" class="button">Enregister les modifications</button>
 	</div>
