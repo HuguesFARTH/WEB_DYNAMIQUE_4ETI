@@ -5,5 +5,5 @@
   <li><a href="mailto:julesforrest@gmail.com">Email</a></li>
   <li><a href="https://dribbble.com/julesforrest">Dribbble</a></li>
   <li><a href="https://github.com/julesforrest">Github</a></li>
-  <li><a>👋</a></li>
+  <li><p>👋</p></li>
 </ul>
