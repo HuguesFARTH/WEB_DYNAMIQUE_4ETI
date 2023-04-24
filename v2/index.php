@@ -42,7 +42,11 @@ switch ($_GET['page']) {
         }
         break;
     case 'profile_form' :
-        $content = $smarty->fetch('./html/profile_form.tpl');
+        if($valid_session){
+            $content = $smarty->fetch('./html/profile_form.tpl');
+        }else{
+            header('Location: /?page=login');
+        }
         break;
     case 'script':
         $request = "SELECT keywords.name as name, patho.idp as pathoIdp, patho.type as pathoType, patho.desc as pathoDesc, symptome.desc as symptDesc
